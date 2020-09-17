@@ -1,0 +1,247 @@
+
+
+
+
+
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+nav li:first-child a {
+	
+}
+
+
+.wrapper {
+  width: 90%;
+  position: relative;
+  
+ 
+}
+
+
+
+
+/* Image from https://developer.mozilla.org */
+
+body {
+      font-family: Verdana, Geneva, sans-serif;
+      margin: 0;
+      font-size: 100%;
+       background-image: url("https://mdn.mozillademos.org/files/11991/startransparent.gif");
+       
+    }
+
+
+
+
+
+
+
+h2,
+h3,{
+
+font-family: "Arial Black", Gadget, sans-serif;
+color:black;
+
+
+
+}
+
+h1
+ {
+
+  font-family: "Arial Black", Gadget, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: #2B65D9;
+
+}
+
+
+
+
+.header-container
+ {
+    background: #153959;
+}
+
+.footer-container
+ {
+
+background: #153959;
+
+}
+
+.main aside{
+
+
+background: #F2BF80;
+    
+
+}
+
+
+
+
+
+.header-container {
+    border-bottom: 20px solid white;
+}
+
+.footer-container,
+.main aside {
+    border-top: 20px, #F25749;
+    
+
+}
+
+
+nav a {
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 15px 0;
+
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #153959;
+    color: white;
+    
+}
+
+
+
+
+
+
+
+nav a:hover {
+    text-decoration: none;
+    color: #F2AC29;
+
+}
+
+
+
+
+
+
+
+
+
+article > footer {
+  margin-top: 10px;
+  
+
+}
+
+
+.title{
+
+padding-left: 20px;
+
+}
+
+.main-container{
+
+
+background-color: white;
+
+
+}
+
+article > header {
+
+  
+  margin-bottom: 20px;
+  text-align: center;
+
+
+   }
+
+
+
+
+
+
+
+/* source from https://css-tricks.com/guide-responsive-friendly-css-columns/ */
+
+article > section {
+  padding-left: 20px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+ -webkit-columns: 2 200px;
+     -moz-columns: 2 200px;
+          columns: 2 200px;
+  -webkit-column-gap: 4em;
+     -moz-column-gap: 4em;
+          column-gap: 4em;
+  -webkit-column-rule: 1px dotted #ddd;
+     -moz-column-rule: 1px dotted #ddd;
+          column-rule: 1px dotted #ddd;
+
+
+
+}
+
+
+
+article > footer{
+
+
+  padding-left: 20px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+
+    
+}
+
+
+
+footer> h3{
+
+font-size: 1em;
+
+
+}
+
+
+article > p{
+
+background-color: : white;
+
+
+}
+
+
+
+
+
+
+
+
+
+.footer-container {
+
+  border-top: 0;
+  height: 100px;
+  text-align: center;
+  position: relative;
+  margin-top: 150px;
+ }
+
+
+
+
+
+
+
+
+
+
