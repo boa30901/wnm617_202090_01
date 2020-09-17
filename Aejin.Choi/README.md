@@ -1,4 +1,5 @@
 # Aejin Choi
 
 #Important Links
-- 
+- http://janechoidesign.com/aau/wnm617/Aejin.Choi/
+- http://janechoidesign.com/aau/wnm617/Aejin.Choi/initializr/
