@@ -8,6 +8,8 @@
 
    <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
    <link rel="stylesheet" href="css/app.css">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet"> 
 
    <script src="lib/js/jquery-2.2.4.min.js"></script>
    <script src="js/app.js"></script>
@@ -24,40 +26,50 @@
 
 <!-- Sign in Page -->
 
-   <section data-role="page" id="signin-page">
+   <section data-role="page" id="signin-page" style="background-color: #ffb902ff;">
       <div data-role="main">
          <div class="flex-stretch display-flex flex-align-center flex-justify-center">
-           <img src="">
+            <img src="img/Logo.png" style="width:50vw;height:50vw;" class="icon" alt="">
          </div>
          <form id="signin-form" data-ajax="false" style="padding:1em">
              <div class="input-container">
             <div class="form-control">
-               <label for="signin-username" class="form-label">Email</label>
-               <input id="signin-username" type="text" class="form-input" data-role="none" placeholder="Type your user email">
+               <label for="signin-username" class="form-label" style="color: var(--color-white);">Email</label>
+               <input id="signin-username" type="text" class="form-input" data-role="none" placeholder="Type your user email" style="background-color:var(--color-white);">
             </div>
             <div class="form-control">
-               <label for="signin-password" class="form-label">Password</label>
-               <input id="signin-password" type="password" class="form-input" data-role="none" placeholder="Type your password">
+               <label for="signin-password" class="form-label"style="color: var(--color-white);">Password</label>
+               <input id="signin-password" type="password" class="form-input" data-role="none" placeholder="Type your password" style="background-color:var(--color-white);">
+            
+           </div>
+          <!-- Forgot password -->
+              <label for="signin-password" class="form-label"style="color: var(--color-main-Secondary);"><a href="#forgot-password">Forgot password?</a></label>
             </div>
-             </div>
+
+
+
             <div class="form-control">
                <input type="submit" data-role="none" class="form-button" value="Sign In" data-role="none">
             
              <a  href="#" id="notification-trigger" data-activate="#signin-notification"></a>
              </div>
             <div class="form-control" style="text-align:center;font-size:0.8em">
-              No account? <a href="#signup-page">Create one</a>!
+              No account? <a href="#signup-page">Create one</a> 
             </div>
          </form>
       </div>
       </div>
+
+
+
+<!-- signin-notification Page -->
 
  <div class="modal" id="signin-notification">
         <div class="modal-back" data-deactivate="#signin-notification"></div>
         <div class="modal-popup">
           <!-- <div class="modal-head">
           </div> -->
-          <div class="modal-body">
+          <div class="modal-body"style="color: #fd636bff;">
             <p>Invalid account. Please try again </p>
 
           </div>
@@ -71,14 +83,72 @@
 
 
 
- <!-- Sign up Page -->
 
-<section data-role="page" id="signup-page">
-<h1>Create Account</h1>
+
+ <!-- Forgot password Page -->
+
+
+
+<section data-role="page" id="forgot-password">
+
+           
+
         <div data-role="main">
 
-         <form id="signup-form" data-ajax="false" style="padding:1em">
+
+
+
+
+     <div class="display-flex flex-justify-center">
+            <h1 style="margin-top:5em">Forgot Password?</h1>
+         </div>
+        
+          <form id="forgot-password-form" data-ajax=“false” style="padding:1em;">
+
+           <div class="form-control">
+               <label for="forgot-password-form-Email" class="form-label">Email</label>
+               <input id="forgot-password-form-Email" type="text" class="form-input" data-role="none" placeholder="Type your Email">
+            </div>
+
             <div class="form-control">
+               <label for="forgot-password-form-Newpassword" class="form-label">New Password</label>
+               <input id="forgot-password-form-Newpassword" type="text" class="form-input" data-role="none" placeholder="Type your New password">
+            </div>
+
+            <div class="form-control">
+               <a href="#signin-page" class="form-button">Reset Password</a>
+            </div>
+
+
+
+
+
+</form>
+
+</div>
+</section>
+
+
+
+
+
+
+ <!-- Sign up Page -->
+
+
+
+
+
+
+<section data-role="page" id="signup-page">
+      <div data-role="main">
+         <div class="flex-stretch display-flex flex-align-center flex-justify-center">
+            <img src="img/Logo.png" style="width:50vw;height:50vw;" class="icon" alt="">
+         </div>
+         
+        <form id="signup-form" data-ajax=“false” style="padding:1em;">
+
+           <div class="form-control">
                <label for="signup-Fristname" class="form-label">Fisrt Name</label>
                <input id="signup-Fristname" type="text" class="form-input" data-role="none" placeholder="Type your Fisrt Name">
             </div>
@@ -98,42 +168,86 @@
                <input id="signup-password" type="password" class="form-input" data-role="none" placeholder="Type your password">
             </div>
 
+         
             
             <div class="form-control">
                <a href="#list-page" class="form-button">Sign Up</a>
             </div>
             <div class="form-control" style="text-align:center;font-size:0.8em">
-               Already have an account? <a href="#signin-page">Sign In</a>!
+               Already have an account? <a href="#signin-page">Sign In</a>
             </div>
          </form>
+
       </div>
-   </section>
+      </div>
+
+ 
+     </section>
 
 
+
+
+
+
+
+
+
+
+
+
+<!-- recent Page -->
 
 
 <section data-role="page" id="recent-page">
+      
+     
       <div data-role="main">
+
+      <form id="form-control" id="searchbar"data-ajax=“false” style="padding:1em;">
+       <input id="searchbar" type="searchbar" class="form-input" data-role="none" placeholder="Location" style="background-color:var(--color-white);">
+
+
+
+      </form>
+     
+         
          <div class="floater right bottom">
-            <div class="btn-circle" data-toggle="#recent-drawer">&plus;</div>
+            <div class="btn-circle" data-toggle="#recent-drawer">&plus;</div><br>
+             
          </div>
 
 
          <div class="modal" id="recent-drawer">
             <!-- <div class="modal-back" data-deactivate="#recent-drawer"></div> -->
-            <div class="modal-drawer left">
-               <div class="modal-head">Title</div>
+            <div class="modal-drawer bottom">
+               <div class="modal-head2">Find Your Dog </div>
                <div class="modal-body">
-                  Links and such
-               </div>
+                 Where's benjamin?<br>
+                 300 Ft From Home
+
+
+               <div class="form-control">
+               <a href="#Trackmap-page" class="form-button" style="background-color:#ffb902ff; ">Track Now</a>
             </div>
+
+
+              <div class="form-control">
+               <a href="#Trackmap-page" class="form-button" style="background-color:#ffb902ff; ">Share location</a>
+            </div>
+
+
+               </div>
+             </div>
          </div>
       </div>
+
+
+
       <footer data-role="footer">
          <ul>
-            <li><a href="#recent-page">Recent</a></li>
-            <li><a href="#list-page">List</a></li>
-            <li><a href="#user-profile-page">Profile</a></li>
+             <li><a href="#recent-page"><img src="img/Mapicon1.png" class="icon"></a></li>
+            <li><a href="#list-page"><img src="img/Dogicon.png" class="icon"></a></li>
+            <li><a href="#user-profile-page"><img src="img/usericon.png" class="icon"></a></li>
          </ul>
       </footer>
 
@@ -143,39 +257,116 @@
 
 
 
-  <section data-role="page" id="list-page">
-      <header data-role="header">
-         <h1>Dogs</h1>
-         <ul>
-            <li class="flex-stretch"></li>
-            <li><a href="#" data-activate="#list-add-animal">+</a></li>
-         </ul>
+<!--Trackmap—page-->
+
+<section data-role="page" id="Trackmap-page">
+
+  <div data-role="main">
+
+
+      <form id="form-control" id="searchbar"data-ajax=“false” style="padding:1em;">
+       <input id="searchbar" type="searchbar" class="form-input" data-role="none" placeholder="Location" style="background-color:var(--color-white);">
+
+     </form>
+
+
+         </div>
+
+<footer>
+   
+   <div class="form-control">
+                <a href="#recent-page" class="form-button">Track my dog again</a>
+            
+            </div>
+</footer>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- List my dog Page -->
+
+  
+
+
+
+  <section data-role="page" id="list-page" style="background-color: #ffb902ff;">
+      <header data-role="header" >
+         <h1 style="color: white;">My Dogs</h1>
+         
       </header>
       <div data-role="main">
+
+      <form id="form-control" id="searchbar"data-ajax=“false” style="padding:1em;">
+       <input id="searchbar" type="searchbar" class="form-input" data-role="none" placeholder="&#128269; Search" style="background-color:var(--color-white);">
+
+
+
+      </form>
+     
+
          <div class="overscroll">
-            <ul>
-               <!-- li*10>a[href=#animal-profile-page]>{Animal $} -->
-               <li><a href="#animal-profile-page">Animal 1</a></li>
-               <li><a href="#animal-profile-page">Animal 2</a></li>
-               <li><a href="#animal-profile-page">Animal 3</a></li>
-               <li><a href="#animal-profile-page">Animal 4</a></li>
-               <li><a href="#animal-profile-page">Animal 5</a></li>
-               <li><a href="#animal-profile-page">Animal 6</a></li>
-               <li><a href="#animal-profile-page">Animal 7</a></li>
-               <li><a href="#animal-profile-page">Animal 8</a></li>
-               <li><a href="#animal-profile-page">Animal 9</a></li>
-               <li><a href="#animal-profile-page">Animal 10</a></li>
-           
-            </ul>
-         </div>
-      </div>
+         
+        <div class="animallist display-flex">
+               <div class="animallist-item">
+                  <a href="#animal-profile-page">
+                  <div class="animallist-icon">
+                     <img src="img/mydog.png" alt="">
+                  </div>
+                  <div class="animallist-description">
+                     <div class="animallist-name">Benjamin</div>
+                  </div>
+                  </a>
+               </div>
+
+
+
+       <div class="animallist display-flex">
+               <div class="animallist-item">
+                  <a href="#dogprofile-add-page">
+                  <div class="animallist-icon">
+                     <img src="img/addiconpng.png" alt="">
+                  </div>
+                  <div class="animallist-description">
+                     <div class="animallist-name">Add</div>
+                  </div>
+                  </a>
+               </div>
+        </div>
+
+
+
+
+
+        </div>
+   
+  
+   
+
+
+   </div>
+
+     </div>
       <footer data-role="footer">
          <ul>
-            <li><a href="#recent-page">Recent</a></li>
-            <li><a href="#list-page">List</a></li>
-            <li><a href="#user-profile-page">Profile</a></li>
+             <li><a href="#recent-page"><img src="img/Mapicon.png" class="icon"></a></li>
+            <li><a href="#list-page"><img src="img/Dogicon1.png" class="icon"></a></li>
+            <li><a href="#user-profile-page"><img src="img/usericon.png" class="icon"></a></li>
          </ul>
       </footer>
+
+
+
+
+
 
 
  <!-- list add animal page -->
@@ -212,61 +403,633 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  <!-- User profile page -->
 
 <section data-role="page" id="user-profile-page">
+  
+
       <div data-role="main">
+
         
    <form id="user-profile-form" data-ajax="false" style="padding: 1em">
-            <h1>Profile</h1>
+
+        <header data-role="header" style=" background-color:var(--color-white); box-shadow:none; ">
+            <h1>My Profile</h1>
+            <ul>
+
+                <li><a href="#list-page"><img src="img/backicon.png" class="icon" style=" height: 1.6em; width:auto;"></a></li>
+
+           </ul>
+
+
+
+        </header>
+
+
+<div style="text-align:right;"><a href="#user-settings-page"><img src="img/settingicon.png" class="icon" style=" height: 1.6em; width:auto;"></a></div>
+
+         <div class=" Profile photo" style="    text-align: center;">  
+        
+        <img src="img/profilephoto.png" alt="photo"class="profile photo">
+      
+         </div>
+
+    <div class="card soft">
+
+   
+
+<div class="form-control">
+               <label for=" user-profile-name" class="form-label" style="color:var(--color-main-medium);"> Name</label>
+               <input id=" user-profile-name" type="text" class="form-input" data-role="none" placeholder="Aejin" style="  background-color: white;">
+            </div>
+           
+            <div class="form-control">
+               <label for=" user-profile-Location" class="form-label"  style="color:var(--color-main-medium);">Location </label>
+               <input id=" user-profile-Location" type="text" class="form-input" data-role="none" placeholder="San Francsico "style="  background-color: white;">
+            </div>
+           
+       
         
 
 
 <div class="form-control">
-               <label for="user-profile-name" class="form-label">Name</label>
-               <input id="user-profile-name" type="text" class="form-input" data-role="none" placeholder="Name">
+                <a href="#signin-page" class="form-button">Logout</a>
+            
+            </div>
+            
+
+</div>
+
+
+
+
+
+       
+             
+      </form>
+      </div>
+
+       <footer data-role="footer">
+         <ul>
+             <li><a href="#recent-page"><img src="img/Mapicon.png" class="icon"></a></li>
+            <li><a href="#list-page"><img src="img/Dogicon.png" class="icon"></a></li>
+            <li><a href="#user-profile-page"><img src="img/Usericon1.png" class="icon"></a></li>
+         </ul>
+      </footer>
+   </section>
+
+
+
+
+
+
+
+
+
+<!-- animal-profile-page-->
+
+
+
+
+   <section data-role="page" id="animal-profile-page">
+
+
+    <div data-role="main">
+
+        
+   <form id="animal-profile-page" data-ajax="false" style="padding: 1em">
+
+        <header data-role="header" style=" background-color:var(--color-white); box-shadow:none; ">
+            <h1>Dog Profile</h1>
+            <ul>
+
+                <li><a href="#list-page"><img src="img/backicon.png" class="icon" style=" height: 1.6em; width:auto;"></a></li>
+
+           </ul>
+
+          </header>
+
+      <ul class="settings-list">
+         <li><a href="#dogprofile-edit-page">Edit Profile</a></li>
+        
+       </ul>
+
+
+
+          
+      <div class="card soft">
+
+   
+
+<div class="form-control">
+               <label for=" animal-profile-name" class="form-label" style="color:var(--color-main-medium);">  Name</label>
+               <input id=" animal-profile-name" type="text" class="form-input" data-role="none" placeholder="Benjamin" style="  background-color: white;">
             </div>
            
             <div class="form-control">
-               <label for="user-profile-email" class="form-label">Email</label>
-               <input id="user-profile-email" type="text" class="form-input" data-role="none" placeholder="Email">
+               <label for=" animal-profile-Breed" class="form-label"  style="color:var(--color-main-medium);">Breed</label>
+               <input id=" animal-profile-Breed" type="text" class="form-input" data-role="none" placeholder="Maltipoo"style="  background-color: white;">
             </div>
            
        
-       
+         <div class="form-control">
+               <label for="animal-profile- Gender" class="form-label"  style="color:var(--color-main-medium);">Gender</label>
+               <input id="animal-profile-Gender" type="text" class="form-input" data-role="none" placeholder="Male"style="  background-color: white;">
+            </div>
+
 
 
              <div class="form-control">
-                <a href="#signin-page" class="form-button">Logout</a>
+               <label for="animal-profile-Color" class="form-label"  style="color:var(--color-main-medium);">Color</label>
+               <input id="animal-profile- Color" type="text" class="form-input" data-role="none" placeholder="White cream"style="  background-color:white;">
+            </div>
+
+
+          <div class="form-control">
+               <label for="animal-profile-Health Notes" class="form-label" style="color:var(--color-main-medium);">Health Notes</label>
+               <input id="animal-profile-Health Notes" type="text" class="form-input" data-role="none" placeholder= "He's super friedly."style=" background-color:white;">
+            </div>
+
+
+           <div class="form-control">
+               <label for="animal-profile-Photo" class="form-label" style="color:var(--color-main-medium);">Photo</label>
+               <input id="animal-profile-Photo" type="text" class="form-input" data-role="none" placeholder= " &plus;Add photo"style=" background-color:white;">
+            </div>
+
+             <div class="form-control">
+                <a href="#dogprofile-edit-page" class="form-button">Edit </a>
             
             </div>
       </form>
       </div>
 
 
- 
 
 
-      <footer data-role="footer">
+
+
+         </div>
+      
+
+
+</form>
+</div>
+</section>
+
+
+
+
+
+<!-- dogprofile-add-page-->
+
+
+
+<section data-role="page" id="dogprofile-add-page">
+
+
+
+
+
+<div data-role="main">
+
+        
+   <form id="dogprofile-add-form" data-ajax="false" style="padding: 1em">
+
+        <header data-role="header" style=" background-color:var(--color-white); box-shadow:none; ">
+            <h1> Add Dog Profile </h1>
+            <ul>
+
+                <li><a href="#list-page"><img src="img/backicon.png" class="icon" style=" height: 1.6em; width:auto;"></a></li>
+
+           </ul>
+
+
+
+        </header>
+
+
+
+
+<div class="form-control">
+               <label for="dogprofile-add-name" class="form-label">Name</label>
+               <input id="dogprofile-add-name" type="text" class="form-input" data-role="none" placeholder="Name">
+            </div>
+           
+            <div class="form-control">
+               <label for="dogprofile-add-Breed" class="form-label">Breed</label>
+               <input id="dogprofile-add-Breed" type="text" class="form-input" data-role="none" placeholder="Breed">
+            </div>
+           
+       
+         <div class="form-control">
+               <label for="dogprofile-add-Gender" class="form-label">Gender</label>
+               <input id="dogprofile-add-Gender" type="text" class="form-input" data-role="none" placeholder="Gender">
+            </div>
+
+       <div class="form-control">
+               <label for="dogprofile-add-Color" class="form-label">Color</label>
+               <input id="dogprofile-add-Color" type="text" class="form-input" data-role="none" placeholder="Color">
+            </div>
+
+     
+
+     <div class="form-control">
+               <label for="dogprofile-add-Health Notes" class="form-label">Health Notes</label>
+               <input id="dogprofile-add-Health Notes" type="text" class="form-input" data-role="none" placeholder="Health Notes">
+            </div>
+
+
+   <div class="form-control">
+               <label for="dogprofile-add-Photo" class="form-label">Photo</label>
+               <input id="dogprofile-add-Photo" type="text" class="form-input" data-role="none" placeholder= " &plus;Add photo">
+            </div>
+
+             <div class="form-control">
+                <a href="#list-page" class="form-button">Save</a>
+            
+            </div>
+      </form>
+      </div>
+
+       <footer data-role="footer">
          <ul>
-            <li><a href="#recent-page">Recent</a></li>
-            <li><a href="#list-page">List</a></li>
-            <li><a href="#user-profile-page">Profile</a></li>
+             <li><a href="#recent-page"><img src="img/Mapicon.png" class="icon"></a></li>
+            <li><a href="#list-page"><img src="img/Dogicon.png" class="icon"></a></li>
+            <li><a href="#user-profile-page"><img src="img/usericon.png" class="icon"></a></li>
+         </ul>
+      </footer>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- dogprofile-edit-page-->
+
+
+
+<section data-role="page" id="dogprofile-edit-page">
+
+
+
+
+
+<div data-role="main">
+
+        
+   <form id="dogprofile-edit-form" data-ajax="false" style="padding: 1em">
+
+        <header data-role="header" style=" background-color:var(--color-white); box-shadow:none; ">
+            <h1> Dog Profile Edit</h1>
+            <ul>
+
+                <li><a href="#animal-profile-page"><img src="img/backicon.png" class="icon" style=" height: 1.6em; width:auto;"></a></li>
+
+           </ul>
+
+
+
+        </header>
+
+
+
+
+<div class="form-control">
+               <label for="dogprofile-edit-name" class="form-label">Name</label>
+               <input id="dogprofile-edit-name" type="text" class="form-input" data-role="none" placeholder="Name">
+            </div>
+           
+            <div class="form-control">
+               <label for="dogprofile-edit-Breed" class="form-label">Breed</label>
+               <input id="dogprofile-edit-Breed" type="text" class="form-input" data-role="none" placeholder="Maltipoo">
+            </div>
+           
+       
+         <div class="form-control">
+               <label for="dogprofile-edit-Gender" class="form-label">Gender</label>
+               <input id="dogprofile-edit-Gender" type="text" class="form-input" data-role="none" placeholder="Male">
+            </div>
+
+       <div class="form-control">
+               <label for="dogprofile-edit-Color" class="form-label">Color</label>
+               <input id="dogprofile-edit-Color" type="text" class="form-input" data-role="none" placeholder="White cream">
+            </div>
+
+     
+
+     <div class="form-control">
+               <label for="dogprofile-edit-Health Notes" class="form-label">Health Notes</label>
+               <input id="dogprofile-edit-Health Notes" type="text" class="form-input" data-role="none" placeholder="Health Notes">
+            </div>
+
+     <div class="form-control">
+               <label for="dogprofile-edit-Photo" class="form-label">Photo</label>
+               <input id="dogprofile-edit-Photo" type="text" class="form-input" data-role="none" placeholder= " &plus;Add photo">
+            </div>
+
+             <div class="form-control">
+                <a href="#animal-profile-page" class="form-button">Save</a>
+            
+            </div>
+      </form>
+      </div>
+
+       <footer data-role="footer">
+         <ul>
+             <li><a href="#recent-page"><img src="img/Mapicon.png" class="icon"></a></li>
+            <li><a href="#list-page"><img src="img/Dogicon.png" class="icon"></a></li>
+            <li><a href="#user-profile-page"><img src="img/usericon.png" class="icon"></a></li>
+         </ul>
+      </footer>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- User settings page -->
+
+
+<section data-role="page" id="user-settings-page">
+
+<div data-role="main">
+
+        
+   <form id="user-settings--form" data-ajax="false" style="padding: 1em">
+
+     <header data-role="header" style=" background-color:var(--color-white); box-shadow:none; ">
+            <h1>User Settings</h1>
+            <ul>
+
+                <li><a href="#user-profile-page"><img src="img/backicon.png" class="icon" style=" height: 1.6em; width:auto;"></a></li>
+           
+         </ul>
+        </header>
+      <div data-role="main">
+         <ul class="settings-list">
+         <li><a href="#user-profile-edit-page">Edit Profile</a></li>
+         <li><a href="#user-password-edit-page">Manage Password</a></li>
+         <li><a href="#mydog-history-page">My dog History</a></li>
+
+       </ul>
+
+
+     <div class="form-control">
+                <a href="#signin-page" class="form-button">Logout</a>
+            
+            </div>
+
+
+      </div>
+  
+
+   </form>
+</div>
+
+
+<footer data-role="footer">
+         <ul>
+             <li><a href="#recent-page"><img src="img/Mapicon.png" class="icon"></a></li>
+            <li><a href="#list-page"><img src="img/Dogicon.png" class="icon"></a></li>
+            <li><a href="#user-profile-page"><img src="img/Usericon1.png" class="icon"></a></li>
          </ul>
       </footer>
    </section>
 
-   <section data-role="page" id="animal-profile-page">
-      <header data-role="header">
-         <h1>Animal Profile</h1>
-         <ul>
-            <li><a href="#" data-rel="back">Back</a></li>
+
+
+
+
+
+
+ <!-- User profile edit page -->
+
+  
+
+<section data-role="page" id="user-profile-edit-page">
+
+
+   <div data-role="main">
+
+        
+   <form id="user-profile-edit-form" data-ajax="false" style="padding: 1em">
+
+  <header data-role="header" style=" background-color:var(--color-white); box-shadow:none; ">
+            <h1>Edit Profile</h1>
+            <ul>
+
+                <li><a href="#user-settings-page"><img src="img/backicon.png" class="icon" style=" height: 1.6em; width:auto;"></a></li>
+           
          </ul>
-      </header>
-      <div data-role="main">
-         
-      </div>
-   </section>
+        </header>
+
+
+<div class="form-control">
+               <label for="user-profile-edit-Firstname" class="form-label">Fisrt Name</label>
+               <input id="user-profile-edit-Fistname" type="text" class="form-input" data-role="none" placeholder="First Name">
+            </div>
+           
+            <div class="form-control">
+               <label for="user-profile-edit-Lastname" class="form-label">Last Name </label>
+               <input id="user-profile-edit-Lastname" type="text" class="form-input" data-role="none" placeholder="Last name">
+            </div>
+           
+           <div class="form-control">
+               <label for="user-profile-edit-email" class="form-label">Email  </label>
+               <input id="user-profile-edit-email" type="text" class="form-input" data-role="none" placeholder="Email">
+            </div>
+
+
+             <div class="form-control">
+               <label for="user-profile-edit-phone" class="form-label">Phone Number  </label>
+               <input id="user-profile-edit-phone" type="text" class="form-input" data-role="none" placeholder="Phone Number">
+            </div>
+
+
+            <div class="form-control">
+               <label for="user-profile-edit-Photo" class="form-label">Photo</label>
+               <input id="user-profile-edit-Photo" type="text" class="form-input" data-role="none" placeholder= " &plus;Add photo">
+            </div>
+
+
+           <div class="form-control">
+                <a href="#user-profile-page" class="form-button">Save</a>
+            
+            </div>
+</div>
+  </form>
+</div>
+
+<footer data-role="footer">
+         <ul>
+             <li><a href="#recent-page"><img src="img/Mapicon.png" class="icon"></a></li>
+            <li><a href="#list-page"><img src="img/Dogicon.png" class="icon"></a></li>
+            <li><a href="#user-profile-page"><img src="img/Usericon1.png" class="icon"></a></li>
+         </ul>
+      </footer>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- User password edit page -->
+
+
+
+<section data-role="page" id="user-password-edit-page">
+
+
+<div data-role="main">
+
+        
+   <form id="user-password-edit-page" data-ajax="false" style="padding: 1em">
+
+  <header data-role="header" style=" background-color:var(--color-white); box-shadow:none; ">
+            <h1>Manage Password </h1>
+            <ul>
+
+                <li><a href="#user-settings-page"><img src="img/backicon.png" class="icon" style=" height: 1.6em; width:auto;"></a></li>
+           
+         </ul>
+        </header>
+
+
+<div class="form-control">
+               <label for="user-password-edite-current password" class="form-label">Current password</label>
+               <input id="user-password-edit-current password" type="text" class="form-input" data-role="none" placeholder="Current password">
+            </div>
+           
+            <div class="form-control">
+               <label for="user-profile-edit-new password" class="form-label">New password </label>
+               <input id="user-profile-edit-new password" type="text" class="form-input" data-role="none" placeholder="New password">
+            </div>
+           
+           <div class="form-control">
+               <label for="user-profile-edit-Re-type" class="form-label">Re-Type New Password </label>
+               <input id="user-profile-edit-Re-type" type="text" class="form-input" data-role="none" placeholder="Re-Type New Password">
+            </div>
+
+
+           <div class="form-control">
+                <a href="#user-settings-page" class="form-button">Done</a>
+            
+            </div>
+
+</div>
+  </form>
+</div>
+
+
+<footer data-role="footer">
+         <ul>
+             <li><a href="#recent-page"><img src="img/Mapicon.png" class="icon"></a></li>
+            <li><a href="#list-page"><img src="img/Dogicon.png" class="icon"></a></li>
+            <li><a href="#user-profile-page"><img src="img/Usericon1.png" class="icon"></a></li>
+         </ul>
+      </footer>
+
+</section>
+
+
+
+
+
+ <!-- mydog history page -->
+
+
+
+<section data-role="page" id="mydog-history-page">
+
+
+<div data-role="main">
+
+
+
+<form id="mydog-history-page" data-ajax="false" style="padding: 1em">
+
+  <header data-role="header" style=" background-color:var(--color-white); box-shadow:none; ">
+            <h1>My dog history </h1>
+            <ul>
+
+                <li><a href="#user-settings-page"><img src="img/backicon.png" class="icon" style=" height: 1.6em; width:auto;"></a></li>
+           
+         </ul>
+        </header>
+
+
+
+
+
+
+</div>
+</form>
+
+
+
+
+<footer data-role="footer">
+         <ul>
+             <li><a href="#recent-page"><img src="img/Mapicon.png" class="icon"></a></li>
+            <li><a href="#list-page"><img src="img/Dogicon.png" class="icon"></a></li>
+            <li><a href="#user-profile-page"><img src="img/Usericon1.png" class="icon"></a></li>
+         </ul>
+      </footer>
+</section>
+
 
 
 
