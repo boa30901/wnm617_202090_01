@@ -10,6 +10,27 @@ $(()=>{
 
 
 
+
+.on ("pagecontainerbeforeshow", function(e,ui){
+     console.log(ui.toPage[0].id)
+
+
+     // Page Routing
+      switch(ui.toPage[0].id) {
+         case "recent-page": RecentPage(); break;
+         case "list-page": ListPage(); break;
+         case "user-profile-page": UserProfilePage(); break;
+         case "animal-profile-page": AnimalProfilePage(); break;
+      }
+   })
+
+
+
+
+
+
+
+
    // FORM SUBMITS
 
    .on("submit","#signin-form",function(e){
@@ -27,6 +48,16 @@ $(()=>{
       sessionStorage.removeItem('userId');
       checkUserId();
    })
+
+
+  .on("click",'.js-animal-jump',function(e){
+      sessionStorage.animalId = $(this).data("id");
+      $.mobile.navigate('#animal-profile-page');
+   })
+
+
+
+
 
 
 
