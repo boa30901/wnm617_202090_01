@@ -1,5 +1,7 @@
 
 
+
+
 $(()=>{
 
 
@@ -17,8 +19,8 @@ $(()=>{
 
      // Page Routing
       switch(ui.toPage[0].id) {
-         case "recent-page": RecentPage(); break;
          case "list-page": ListPage(); break;
+         case "recent-page": RecentPage(); break;
          case "user-profile-page": UserProfilePage(); break;
          case "animal-profile-page": AnimalProfilePage(); break;
       }
