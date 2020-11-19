@@ -364,6 +364,40 @@ img.icon{
 
 
 
+/* signin-notification warning */
+
+
+
+.modal-toast {
+  position: absolute;
+  width: 70%;
+  min-height: var(--header-height);
+  background-color: #fd636bff;
+  color: var(--color-white);
+  border-radius: 0.3em;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.15);
+  left: 50%;
+  text-align: center;
+  padding: 1em;
+  transition: all 0.3s;
+}
+
+
+
+.modal-toast.center {
+  top: 22em;
+  transform: translate(-50%, -1em);
+}
+.modal-toast.bottom {
+  bottom: 1em;
+  transform: translate(-50%, -1em);
+}
+.modal.active .modal-toast {
+  transform: translate(-50%, 0);
+  pointer-events: initial;
+}
+
+
 
 
 

@@ -8,8 +8,9 @@ const makeAnimalList = templater(o=>`
       </div>
       <div class="animallist-description">
          <div class="animallist-name">${o.name}</div>
-         <div class="animallist-type"><strong>Type</strong> ${o.type}</div>
+         <div class="animallist-color"><strong>Color</strong>${o.color}</div>
          <div class="animallist-breed"><strong>Breed</strong> ${o.breed}</div>
+         <div class="animallist-Personality"><strong>Personality</strong> ${o.Personality}</div>
       </div>
    </div>
    `);

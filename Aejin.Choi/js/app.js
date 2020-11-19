@@ -23,6 +23,10 @@ $(()=>{
          case "recent-page": RecentPage(); break;
          case "user-profile-page": UserProfilePage(); break;
          case "animal-profile-page": AnimalProfilePage(); break;
+         case "Trackmap-page": TrackmapPage(); break;
+     
+
+
       }
    })
 

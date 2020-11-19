@@ -70,6 +70,7 @@
               No account? <a href="#signup-page">Create one</a> 
             </div>
          </form>
+
       </div>
       </div>
 
@@ -77,21 +78,14 @@
 
 <!-- signin-notification Page -->
 
- <div class="modal" id="signin-notification">
-        <div class="modal-back" data-deactivate="#signin-notification"></div>
-        <div class="modal-popup">
-          <!-- <div class="modal-head">
-          </div> -->
-          <div class="modal-body"style="color: #fd636bff;">
-            <p>Invalid account. Please try again </p>
+ <div class="modal" id="signin-warning">
+      <div class="modal-toast center" data-deactive="#signin-warning">
+        <div class="message"></div>
+      </div>
+    </div>
+  </section>
 
-          </div>
-          <div class="modal-foot">
-            <a href="#" data-deactivate="#signin-notification">Next</a>
-          </div>
 
-        </div>
-     </section>
 
 
 
@@ -329,15 +323,9 @@
 <section data-role="page" id="Trackmap-page">
 
   <div data-role="main">
-
-
-      <form id="form-control" id="searchbar"data-ajax=“false” style="padding:1em;">
-       <input id="searchbar" type="searchbar" class="form-input" data-role="none" placeholder="Location" style="background-color:var(--color-white);">
-
-     </form>
-
-
-         </div>
+ <div class="map"></div>
+    
+</div>
 
 <footer>
    
@@ -372,6 +360,8 @@
          </ul>
       </header>
       <div data-role="main">
+        <form id="form-control" id="searchbar"data-ajax=“false” style="padding:1em;">
+       <input id="searchbar" type="searchbar" class="form-input" data-role="none" placeholder="&#128269; Search" style="background-color:var(--color-white);">
          <div class="overscroll">
             <div class="animallist"></div>
          </div>
@@ -501,6 +491,14 @@
       
   
 
+  <footer data-role="footer">
+         <ul>
+             <li><a href="#recent-page"><img src="img/Mapicon.png" class="icon"></a></li>
+            <li><a href="#list-page"><img src="img/Dogicon.png" class="icon"></a></li>
+            <li><a href="#user-profile-page"><img src="img/usericon.png" class="icon"></a></li>
+         </ul>
+      </footer>
+   </section>
 
 
 
@@ -584,15 +582,7 @@
       </form>
       </div>  -->
 
-       <footer data-role="footer">
-         <ul>
-             <li><a href="#recent-page"><img src="img/Mapicon.png" class="icon"></a></li>
-            <li><a href="#list-page"><img src="img/Dogicon.png" class="icon"></a></li>
-            <li><a href="#user-profile-page"><img src="img/usericon.png" class="icon"></a></li>
-         </ul>
-      </footer>
-   </section>
-
+     
 
 
 
@@ -611,7 +601,7 @@
       <header data-role="header" style=" background-color:var(--color-white); box-shadow:none; ">
           <h1>Dog Profile</h1>
          <ul>
-            <li><a href="#" data-rel="back">Back</a></li>
+            <li><a href="#list-page"><img src="img/backicon.png" class="icon" style=" height: 1.6em; width:auto;"></a></li>
          </ul>
       </header>
       <div data-role="main">
@@ -620,6 +610,11 @@
          </div>
          <div class="profile-bottom">
             <div class="profile"></div>
+          <div class="form-control">
+                <a href="#dogprofile-edit-page" class="form-button">Edit </a>
+            
+            </div>
+
          </div>
       </div>
    </section>

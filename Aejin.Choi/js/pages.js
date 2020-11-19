@@ -15,6 +15,11 @@ const ListPage = async() => {
 
 
 
+
+
+
+
+
 const RecentPage = async() => { 
 
 let d = await query({type:'recent_locations',params:[sessionStorage.userId]});
@@ -38,6 +43,31 @@ console.log(d)
 
 
 
+const TrackmapPage = async() => { 
+
+let d = await query({type:'recent_locations',params:[sessionStorage.userId]});
+
+console.log(d)
+
+   let valid_animals = d.result.reduce((r,o)=>{
+      o.icon = o.img;
+      if(o.lat && o.lng) r.push(o);
+      return r;
+   },[]);
+
+   let map_el = await makeMap("#Trackmap-page .map");
+
+   makeMarkers(map_el,valid_animals)
+
+
+
+}
+
+
+
+
+
+
 
 
 const UserProfilePage = async() => {
@@ -47,6 +77,8 @@ const UserProfilePage = async() => {
 
    $("#user-profile-page .profile").html(makeUserProfile(d.result))
 }
+
+
 
 const AnimalProfilePage = async() => {
    query({type:'animal_by_id',params:[sessionStorage.animalId]})

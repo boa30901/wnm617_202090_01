@@ -13,7 +13,7 @@ const checkSigninForm = async() => {
   let pass = $("#signin-password").val();
 
   if(user=='' || pass=='') {
-    makeWarning("#signin-warning","Please fill in Username and Password");
+    makeWarning("#signin-warning","Invalid account. Please try again");
     return;
   }
 
@@ -35,7 +35,7 @@ const checkSigninForm = async() => {
     console.log("failure");
     sessionStorage.removeItem('userId');
 
-    makeWarning("#signin-warning","Incorrect Username or Password")
+    makeWarning("#signin-warning","Invalid account. Please try again")
   }
 
   checkUserId();
