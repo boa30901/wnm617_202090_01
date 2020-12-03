@@ -215,8 +215,10 @@
 
 
          <div class="modal" id="recent-drawer">
-            <!-- <div class="modal-back" data-deactivate="#recent-drawer"></div> -->
+            <div class="modal-back" data-deactivate="#recent-drawer"></div>
+
             <div class="modal-drawer bottom">
+              
                <div class="modal-head2">Find Your Dog </div>
                <div class="modal-body">
                  Where's benjamin?<br>
@@ -231,10 +233,15 @@
               <div class="form-control">
                <a href="#Trackmap-page" class="form-button" style="background-color:#ffb902ff; ">Share location</a>
             </div>
+
+
+
+
                </div>
-            </div>
+             </div>
+          
          </div>
-      </div>
+    </div>
       
 <footer data-role="footer">
          <ul>
@@ -354,20 +361,46 @@
 <section data-role="page" id="list-page" style="background-color: #ffb902ff;">
       <header data-role="header">
          <h1 style="color: white;">My Dogs</h1>
-         <ul>
-            <li class="flex-stretch"></li>
-            <li><a href="#" data-activate="#list-add-animal">+</a></li>
-         </ul>
+         
       </header>
       <div data-role="main">
         <form id="form-control" id="searchbar"data-ajax=“false” style="padding:1em;">
        <input id="searchbar" type="searchbar" class="form-input" data-role="none" placeholder="&#128269; Search" style="background-color:var(--color-white);">
+         
+        <div class="animallist-item"  >
+          <a href="#dogprofile-add-page">
+            <div class="animallist-icon">
+             <img src="img/addiconpng.png" alt="">
+           </div>
+           <div class="animallist-description">
+             <div class="animallist-name">Add</div>
+           </div>
+         </a>
+       </div>
+
+ 
+
+
+
          <div class="overscroll">
-            <div class="animallist"></div>
+
+        <div class="animallist"></div>
          </div>
       </div>
 
 
+
+
+
+<footer data-role="footer">
+         <ul>
+             <li><a href="#recent-page"><img src="img/Mapicon.png" class="icon"></a></li>
+            <li><a href="#list-page"><img src="img/Dogicon.png" class="icon"></a></li>
+            <li><a href="#user-profile-page"><img src="img/usericon.png" class="icon"></a></li>
+         </ul>
+      </footer>
+
+</section>
 
 
 
@@ -428,16 +461,7 @@
 -->
       
 
-      <footer data-role="footer">
-         <ul>
-             <li><a href="#recent-page"><img src="img/Mapicon.png" class="icon"></a></li>
-            <li><a href="#list-page"><img src="img/Dogicon.png" class="icon"></a></li>
-            <li><a href="#user-profile-page"><img src="img/usericon.png" class="icon"></a></li>
-         </ul>
-      </footer>
-
-</section>
-
+      
 
 
 
@@ -486,6 +510,35 @@
 
 <section data-role="page" id="user-profile-page">
       <div data-role="main">
+
+     <form id="user-profile-form" data-ajax="false" style="padding: 1em">
+
+        <header data-role="header" style=" background-color:var(--color-white); box-shadow:none; ">
+            <h1>My Profile</h1>
+            <ul>
+
+                <li><a href="#list-page"><img src="img/backicon.png" class="icon" style=" height: 1.6em; width:auto;"></a>
+
+
+                </li>
+         <li class="flex-stretch"></li>
+       <li><a href="#user-settings-page"><img src="img/settingicon.png" class="icon" style=" height: 1.6em; width:auto;"></a></a></li>
+
+              
+          </ul>
+      
+        
+        </header>
+
+        
+
+
+       
+
+      </form>
+        
+
+ 
          <div class="profile"></div>
       </div>
       
@@ -598,12 +651,18 @@
 
 
 <section data-role="page" id="animal-profile-page">
-      <header data-role="header" style=" background-color:var(--color-white); box-shadow:none; ">
+      <header data-role="header" style=" background-color:var(--color-white); box-shadow:none; padding: 10px;">
           <h1>Dog Profile</h1>
          <ul>
             <li><a href="#list-page"><img src="img/backicon.png" class="icon" style=" height: 1.6em; width:auto;"></a></li>
+
+
+
          </ul>
+
       </header>
+
+
       <div data-role="main">
          <div class="profile-top">
             <div class="map"></div>
@@ -617,6 +676,23 @@
 
          </div>
       </div>
+
+
+
+
+<footer data-role="footer">
+         <ul>
+             <li><a href="#recent-page"><img src="img/Mapicon.png" class="icon"></a></li>
+            <li><a href="#list-page"><img src="img/Dogicon.png" class="icon"></a></li>
+            <li><a href="#user-profile-page"><img src="img/usericon.png" class="icon"></a></li>
+         </ul>
+      </footer>
+
+
+
+
+
+
    </section>
 
 

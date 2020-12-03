@@ -40,6 +40,7 @@ h5,
 h6 {
    color:var(--color-neutral-dark);
    font-family:Montserrat;
+   text-align: center;
 }
 
 
@@ -159,10 +160,22 @@ a {
    top:0;
    left:0;
 }
+
+
+
 [data-role='main'] {
    flex: 1 1 100%;
    overflow:hidden;
    position:relative;
+
+
+   
+
+
+
+
+
+
 }
 .ui-header,
 .ui-footer {
@@ -569,10 +582,22 @@ img.icon{
 }
 
 
+.animal-profile-image img {
+  width:50vw;
+  height:50vw;
+  object-fit:cover;
+  margin: 45px;
+}
 
 
 
-
+.user-profile-image img {
+    width: 70%;
+    border-radius: 50%;
+    margin: 0.5em;
+    padding: 0.5em;
+    position: relative; 
+  }
 
 
 
@@ -602,6 +627,11 @@ img.icon{
     border-top: 1px solid #1155ccff;
 }
 
+
+
+.profile {
+    text-align: center;
+}
 
 
 

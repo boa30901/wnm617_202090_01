@@ -114,6 +114,28 @@ case "recent_locations":
 				",$p);
 
 
+
+
+       // CRUD
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		default: return ["error"=>"No Matched Type"];
 	}
 }

@@ -25,8 +25,12 @@ const makeUserProfile = templater(o=>`
    </div>
    <h2>${o.name}</h2>
    <h3>@${o.username}</h3>
-   <div><a href="#user-settings-page">Settings</a></div>
+   <h3>@${o.email}</h3>
+  
    `);
+
+
+
 
 
 
@@ -39,7 +43,10 @@ const makeAnimalProfile = templater(o=>`
    <div class="animal-profile-image">
       <img src="${o.img}" alt="">
    </div>
-   <h2>${o.name}</h2>
+   <div class="animallist-name">${o.name}</div>
+  <div><strong>Breed</strong> ${o.breed}</div>
+   <div><strong>Color</strong> ${o.color}</div>
+    <div><p>${o.description}</p></div>
    `);
 
 
