@@ -530,15 +530,10 @@
         
         </header>
 
-        
-
-
-       
+      
 
       </form>
         
-
- 
          <div class="profile"></div>
       </div>
       
@@ -825,37 +820,39 @@
 
 <div class="form-control">
                <label for="dogprofile-add-name" class="form-label">Name</label>
-               <input id="dogprofile-add-name" type="text" class="form-input" data-role="none" placeholder="Name">
+               <input id="dogprofile-add-name" type="text" class="form-input" data-role="none" placeholder="">
             </div>
            
-            <div class="form-control">
-               <label for="dogprofile-add-Breed" class="form-label">Breed</label>
-               <input id="dogprofile-add-Breed" type="text" class="form-input" data-role="none" placeholder="Breed">
-            </div>
-           
-       
-         <div class="form-control">
-               <label for="dogprofile-add-Gender" class="form-label">Gender</label>
-               <input id="dogprofile-add-Gender" type="text" class="form-input" data-role="none" placeholder="Gender">
+            
+<div class="form-control">
+               <label for="dogprofile-edit-Breed" class="form-label">Breed</label>
+               <input id="dogprofile-edit-Breed" type="text" class="form-input" data-role="none" placeholder="">
             </div>
 
-       <div class="form-control">
-               <label for="dogprofile-add-Color" class="form-label">Color</label>
-               <input id="dogprofile-add-Color" type="text" class="form-input" data-role="none" placeholder="Color">
+
+<div class="form-control">
+               <label for="dogprofile-edit-Color" class="form-label">Color</label>
+               <input id="dogprofile-edit-Color" type="text" class="form-input" data-role="none" placeholder="">
             </div>
 
      
 
      <div class="form-control">
-               <label for="dogprofile-add-Health Notes" class="form-label">Health Notes</label>
-               <input id="dogprofile-add-Health Notes" type="text" class="form-input" data-role="none" placeholder="Health Notes">
+               <label for="dogprofile-edit-Personality" class="form-label">Personality</label>
+               <input id="dogprofile-edit-Personality" type="text" class="form-input" data-role="none" placeholder="">
             </div>
 
 
-   <div class="form-control">
-               <label for="dogprofile-add-Photo" class="form-label">Photo</label>
-               <input id="dogprofile-add-Photo" type="text" class="form-input" data-role="none" placeholder= " &plus;Add photo">
+     <div class="form-control">
+               <label for="dogprofile-edit-Description" class="form-label">Description</label>
+               <input id="dogprofile-edit-Description" type="text" class="form-input" data-role="none" placeholder="">
             </div>
+
+
+
+
+
+
 
              <div class="form-control">
                 <a href="#list-page" class="form-button">Save</a>
@@ -903,10 +900,7 @@
 
 <div data-role="main">
 
-        
-   <form id="dogprofile-edit-form" data-ajax="false" style="padding: 1em">
-
-        <header data-role="header" style=" background-color:var(--color-white); box-shadow:none; ">
+     <header data-role="header" style=" background-color:var(--color-white); box-shadow:none; ">
             <h1> Dog Profile Edit</h1>
             <ul>
 
@@ -918,10 +912,16 @@
 
         </header>
 
+       
+
+   <form id="dogprofile-edit-form" data-ajax="false" style="padding: 1em">
+
+        
 
 
 
-<div class="form-control">
+
+<!--<div class="form-control">
                <label for="dogprofile-edit-name" class="form-label">Name</label>
                <input id="dogprofile-edit-name" type="text" class="form-input" data-role="none" placeholder="Name">
             </div>
@@ -932,10 +932,7 @@
             </div>
            
        
-         <div class="form-control">
-               <label for="dogprofile-edit-Gender" class="form-label">Gender</label>
-               <input id="dogprofile-edit-Gender" type="text" class="form-input" data-role="none" placeholder="Male">
-            </div>
+      
 
        <div class="form-control">
                <label for="dogprofile-edit-Color" class="form-label">Color</label>
@@ -945,29 +942,33 @@
      
 
      <div class="form-control">
-               <label for="dogprofile-edit-Health Notes" class="form-label">Health Notes</label>
-               <input id="dogprofile-edit-Health Notes" type="text" class="form-input" data-role="none" placeholder="Health Notes">
+               <label for="dogprofile-edit-Personality" class="form-label">Personality</label>
+               <input id="dogprofile-edit-Personality" type="text" class="form-input" data-role="none" placeholder="Personality">
             </div>
+
 
      <div class="form-control">
-               <label for="dogprofile-edit-Photo" class="form-label">Photo</label>
-               <input id="dogprofile-edit-Photo" type="text" class="form-input" data-role="none" placeholder= " &plus;Add photo">
+               <label for="dogprofile-edit-Description" class="form-label">Description</label>
+               <input id="dogprofile-edit-Description" type="text" class="form-input" data-role="none" placeholder="Description">
             </div>
 
-             <div class="form-control">
+
+
+             -->
+      </form>
+
+
+
+
+
+      </div>
+
+
+<div class="form-control">
                 <a href="#animal-profile-page" class="form-button">Save</a>
             
             </div>
-      </form>
-      </div>
-
-       <footer data-role="footer">
-         <ul>
-             <li><a href="#recent-page"><img src="img/Mapicon.png" class="icon"></a></li>
-            <li><a href="#list-page"><img src="img/Dogicon.png" class="icon"></a></li>
-            <li><a href="#user-profile-page"><img src="img/usericon.png" class="icon"></a></li>
-         </ul>
-      </footer>
+       
 
 
 
@@ -1050,13 +1051,7 @@
 
 <section data-role="page" id="user-profile-edit-page">
 
-
-   <div data-role="main">
-
-        
-   <form id="user-profile-edit-form" data-ajax="false" style="padding: 1em">
-
-  <header data-role="header" style=" background-color:var(--color-white); box-shadow:none; ">
+ <header data-role="header" style=" background-color:var(--color-white); box-shadow:none; ">
             <h1>Edit Profile</h1>
             <ul>
 
@@ -1064,9 +1059,14 @@
            
          </ul>
         </header>
+   <div data-role="main">
 
+        
+   <form id="user-profile-edit-form" data-ajax="false" style="padding: 1em">
 
-<div class="form-control">
+ 
+
+<!--<div class="form-control">
                <label for="user-profile-edit-Firstname" class="form-label">Fisrt Name</label>
                <input id="user-profile-edit-Fistname" type="text" class="form-input" data-role="none" placeholder="First Name">
             </div>
@@ -1088,18 +1088,22 @@
             </div>
 
 
-            <div class="form-control">
-               <label for="user-profile-edit-Photo" class="form-label">Photo</label>
-               <input id="user-profile-edit-Photo" type="text" class="form-input" data-role="none" placeholder= " &plus;Add photo">
-            </div>
+            
 
 
-           <div class="form-control">
+           
+</div>-->
+  
+
+
+</form> 
+
+
+
+<div class="form-control">
                 <a href="#user-profile-page" class="form-button">Save</a>
             
             </div>
-</div>
-  </form>
 </div>
 
 <footer data-role="footer">

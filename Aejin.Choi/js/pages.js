@@ -67,9 +67,6 @@ console.log(d)
 
 
 
-
-
-
 const UserProfilePage = async() => {
    let d = await query({type:'user_by_id',params:[sessionStorage.userId]});
 
@@ -77,6 +74,19 @@ const UserProfilePage = async() => {
 
    $("#user-profile-page .profile").html(makeUserProfile(d.result))
 }
+
+
+
+
+const UserEditPage = async() => {
+	let d = await query({type:'user_by_id',params:[sessionStorage.userId]});
+
+	console.log(d);
+
+	$("#user-profile-edit-form").html(makeUserEditForm(d.result[0]))
+}
+
+
 
 
 
@@ -97,5 +107,39 @@ const AnimalProfilePage = async() => {
    });
 
 
-   
+ }
+
+
+
+const AnimalEditPage = async() => {
+   let d = await query({type:'animal_by_id',params:[sessionStorage.animalId]});
+
+   console.log(d);
+
+   $("#dogprofile-edit-form")
+      .html(makeAnimalEditForm(d.result[0]))
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
