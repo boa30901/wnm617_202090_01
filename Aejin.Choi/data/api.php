@@ -201,10 +201,6 @@ case "update_user":
 
 
 
-
-
-
-
 		case "update_animal":
 			$r = makeQuery($c,"UPDATE
 				`track_animals`
@@ -221,8 +217,10 @@ case "update_user":
 
 
 
+      // UPDATE
 
-
+         case "delete_animal":
+		
 
 
 
