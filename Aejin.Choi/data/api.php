@@ -154,6 +154,80 @@ case "recent_locations":
 
 
            
+    case "insert_animal":
+         $r = makeQuery($c,"INSERT INTO
+            `track_dogs`
+            (`user_id`,`name`,`breed`,`color`,`personality``description`,`img`,`date_create`)
+            VALUES
+            (?, ?, ?, ?, ?, 'https://placedog.net/400?', NOW())
+            ",$p);
+         return ["id"=>$c->lastInsertId()];
+
+     
+
+      case "insert_location":
+         $r = makeQuery($c,"INSERT INTO
+            `track_locations`
+            (`animal_id`,`lat`,`lng`,`description`,`photo`,`icon`,`date_create`)
+            VALUES
+            (?, ?, ?, ?, 'https://via.placeholder.com/400?text=Photo', 'https://via.placeholder.com/100?text=Icon', NOW())
+            ",$p);
+         return [
+            "r"=>$r,
+            "p"=>$p,
+            "id"=>$c->lastInsertId()];
+
+
+
+
+        // UPDATE
+
+
+
+  
+
+
+case "update_user":
+			$r = makeQuery($c,"UPDATE
+				`track_users`
+				SET
+				`username` = ?,
+				`name` = ?,
+				`email` = ?
+				WHERE `id` = ?
+				",$p,false);
+			return ["result"=>"success"];
+
+
+
+
+
+
+
+
+		case "update_animal":
+			$r = makeQuery($c,"UPDATE
+				`track_animals`
+				SET
+				`name` = ?,
+				`breed` = ?,
+				`color` = ?,
+				`personality` = ?,
+				`description` = ?
+				WHERE `id` = ?
+				",$p,false);
+			return ["result"=>"success"];
+
+
+
+
+
+
+
+
+
+
+
 
 
 

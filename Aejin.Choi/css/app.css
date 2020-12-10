@@ -509,6 +509,7 @@ img.icon{
 
 
 .btn-circle {
+   display: inline-block;
    background-color:#ffb902ff;
    width:3rem;
    height:3rem;
@@ -541,6 +542,17 @@ img.icon{
 }
 
 
+
+.animallist {
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+
+
 .animallist-icon img {
     width: 150px;
     height: 150px;
@@ -562,6 +574,10 @@ img.icon{
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
 }
+
+
+
+
 
 
 #animal-profile-page [data-role='main'] {
@@ -670,6 +686,17 @@ img.icon{
     padding: 3em 0 1em;
 
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

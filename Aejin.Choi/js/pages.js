@@ -10,6 +10,9 @@ const ListPage = async() => {
    console.log(d);
 
    $("#list-page .animallist ").html(makeAnimalList(d.result))
+
+      drawAnimalList(d.result);
+
 }
 
 
@@ -83,7 +86,7 @@ const UserEditPage = async() => {
 
 	console.log(d);
 
-	$("#user-profile-edit-form").html(makeUserEditForm(d.result[0]))
+	$("#user-edit-form").html(makeUserEditForm(d.result[0]))
 }
 
 
@@ -116,7 +119,7 @@ const AnimalEditPage = async() => {
 
    console.log(d);
 
-   $("#dogprofile-edit-form")
+   $("#animal-edit-form")
       .html(makeAnimalEditForm(d.result[0]))
 }
 
@@ -126,6 +129,24 @@ const AnimalEditPage = async() => {
 
 
 
+const LocationAddPage = async() => {
+   let map_el = await makeMap("#location-add-page .map");
+   makeMarkers(map_el,[]);
+
+   let map = map_el.data('map');
+
+   map.addListener("click",function(e){
+      console.log(e)
+      let posFromClick = {lat:e.latLng.lat(),lng:e.latLng.lng()};
+      let posFromCenter = {lat:map.getCenter().lat(),lng:map.getCenter().lng()};
+      console.log(posFromClick, posFromCenter)
+      $("#location-add-lat").val(posFromClick.lat)
+      $("#location-add-lng").val(posFromClick.lng)
+
+      makeMarkers(map_el,[posFromClick],false);
+   });
+
+}
 
 
 

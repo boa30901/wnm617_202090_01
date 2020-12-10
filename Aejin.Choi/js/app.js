@@ -22,10 +22,11 @@ $(()=>{
          case "list-page": ListPage(); break;
          case "recent-page": RecentPage(); break;
          case "user-profile-page": UserProfilePage(); break;
-         case "user-profile-edit-page": UserEditPage(); break;
+         case "user-edit-page": UserEditPage(); break;
          case "animal-profile-page": AnimalProfilePage(); break;
-         case "dogprofile-edit-page": AnimalEditPage(); break;
+         case "animal-edit-page": AnimalEditPage(); break;
          case "Trackmap-page": TrackmapPage(); break;
+         case "location-add-page": LocationAddPage(); break;
      
 
 
@@ -45,6 +46,57 @@ $(()=>{
       e.preventDefault();
       checkSigninForm();
    })
+
+
+   .on("submit","#signup-form",function(e){
+      e.preventDefault();
+      checkSignupForm();
+   })
+
+
+
+
+
+
+// FORM SUBMIT CLICKS
+
+   .on("click",'.js-user-edit',function(e){
+      checkUserEditForm();
+   })
+   .on("click",'.js-animal-add',function(e){
+      checkAnimalAddForm();
+   })
+   .on("click",'.js-animal-edit',function(e){
+      checkAnimalEditForm();
+   })
+   .on("click",'.js-location-add',function(e){
+      checkLocationAddForm();
+   })
+
+
+
+
+.on("click",".filter",function(){
+      checkListFilter($(this).data());
+   })
+   .on("change",".image-uploader input",function(){
+      checkUpload(this.files[0])
+      .then(d=>{
+         console.log(d)
+         makeUploaderImage({
+            namespace:'user-upload',
+            folder:'uploads/',
+            name:d.result
+         })
+      })
+   })
+
+
+
+
+
+
+
 
 
 

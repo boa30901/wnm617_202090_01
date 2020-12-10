@@ -13,6 +13,7 @@
 
    <script src="lib/js/jquery-2.2.4.min.js"></script>
    <script src="js/functions.js"></script>
+   <script src="js/forms.js"></script>
    <script src="js/pages.js"></script>
    <script src="js/parts.js"></script>
   <script src="js/signin.js"></script>
@@ -47,7 +48,7 @@
          <form id="signin-form" data-ajax="false" style="padding:1em">
              <div class="input-container">
             <div class="form-control">
-               <label for="signin-username" class="form-label" style="color: var(--color-white);">Email</label>
+               <label for="signin-username" class="form-label" style="color: var(--color-white);">Username</label>
                <input id="signin-username" type="text" class="form-input" data-role="none" placeholder="Type your user email" style="background-color:var(--color-white);">
             </div>
             <div class="form-control">
@@ -156,19 +157,16 @@
         <form id="signup-form" data-ajax=“false” style="padding:1em;">
 
            <div class="form-control">
-               <label for="signup-First name" class="form-label">First name</label>
-               <input id="signup-First name" type="text" class="form-input" data-role="none" placeholder="Type your First name Name">
+               <label for="signup-Username" class="form-label">Username</label>
+               <input id="signup-Username" type="text" class="form-input" data-role="none" placeholder="Type your Username">
             </div>
 
-            <div class="form-control">
-               <label for="signup-Lastname" class="form-label">Last Name</label>
-               <input id="signup-Lastname" type="text" class="form-input" data-role="none" placeholder="Type your Last Name">
+          <div class="form-control">
+               <label for="signup-email" class="form-label">Email</label>
+               <input id="signup-email" type="email" class="form-input" data-role="none" placeholder="Type your Email">
             </div>
 
-            <div class="form-control">
-               <label for="signup-email" class="form-label">Email </label>
-               <input id="signup-email" type="password" class="form-input" data-role="none" placeholder="Type your Email">
-            </div>
+
 
             <div class="form-control">
                <label for="signup-password" class="form-label">Password</label>
@@ -176,6 +174,15 @@
             </div>
 
          
+     <div class="form-control">
+               <label for="signup-Confirm Password" class="form-label">Confirm Password</label>
+               <input id="signup-Confirm Password" type="password" class="form-input" data-role="none" placeholder="Type your Confirm Password">
+            </div>
+
+
+
+
+
             
             <div class="form-control">
                <a href="#list-page" class="form-button">Sign Up</a>
@@ -207,13 +214,14 @@
 
 <section data-role="page" id="recent-page">
       <div data-role="main">
+
          <div class="map"></div>
 
          <div class="floater right bottom">
              <div class="btn-circle" data-toggle="#recent-drawer">&plus;</div><br>
          </div>
 
-
+      
          <div class="modal" id="recent-drawer">
             <div class="modal-back" data-deactivate="#recent-drawer"></div>
 
@@ -358,17 +366,16 @@
 
 
 
-<section data-role="page" id="list-page" style="background-color: #ffb902ff;">
+<section data-role="page" id="list-page" >
       <header data-role="header">
          <h1 style="color: white;">My Dogs</h1>
          
       </header>
       <div data-role="main">
-        <form id="form-control" id="searchbar"data-ajax=“false” style="padding:1em;">
-       <input id="searchbar" type="searchbar" class="form-input" data-role="none" placeholder="&#128269; Search" style="background-color:var(--color-white);">
+        
          
-        <div class="animallist-item"  >
-          <a href="#dogprofile-add-page">
+        <div class="animallist-item"  style="width: 9.5em;">
+          <a href="#animal-add-page">
             <div class="animallist-icon">
              <img src="img/addiconpng.png" alt="">
            </div>
@@ -379,8 +386,6 @@
        </div>
 
  
-
-
 
          <div class="overscroll">
 
@@ -661,11 +666,16 @@
       <div data-role="main">
          <div class="profile-top">
             <div class="map"></div>
-         </div>
+
+          <div class="floater right bottom">
+            <a href="#location-add-page" class="btn-circle" style="color: var(--color-main-medium)">&plus;</a>
+          </div>
+        </div>
+
          <div class="profile-bottom">
             <div class="profile"></div>
           <div class="form-control">
-                <a href="#dogprofile-edit-page" class="form-button">Edit </a>
+                <a href="#animal-edit-page" class="form-button">Edit </a>
             
             </div>
 
@@ -788,23 +798,15 @@
 
 
 
-<!-- dogprofile-add-page-->
+<!-- animal-add-page -->
 
 
 
-<section data-role="page" id="dogprofile-add-page">
+<section data-role="page" id="animal-add-page">
 
 
-
-
-
-<div data-role="main">
-
-        
-   <form id="dogprofile-add-form" data-ajax="false" style="padding: 1em">
-
-        <header data-role="header" style=" background-color:var(--color-white); box-shadow:none; ">
-            <h1> Add Dog Profile </h1>
+<header data-role="header" style=" background-color:var(--color-white); box-shadow:none; ">
+            <h1> Add a new Dog  </h1>
             <ul>
 
                 <li><a href="#list-page"><img src="img/backicon.png" class="icon" style=" height: 1.6em; width:auto;"></a></li>
@@ -817,49 +819,56 @@
 
 
 
+<div data-role="main">
+
+        <div class="overscroll">
+   <form id="animal-add-form" data-ajax="false" style="padding: 1em">
+
+        <input type="hidden" id="animal-add-destination"  value="#animal-profile-page">
+
+
 
 <div class="form-control">
-               <label for="dogprofile-add-name" class="form-label">Name</label>
-               <input id="dogprofile-add-name" type="text" class="form-input" data-role="none" placeholder="">
+               <label for="animal-add-name" class="form-label">Name</label>
+               <input id="animal-add-name" type="text" class="form-input" data-role="none" placeholder="">
             </div>
            
             
 <div class="form-control">
-               <label for="dogprofile-edit-Breed" class="form-label">Breed</label>
-               <input id="dogprofile-edit-Breed" type="text" class="form-input" data-role="none" placeholder="">
+               <label for="animal-add-breed" class="form-label">Breed</label>
+               <input id="animal-add-breed" type="text" class="form-input" data-role="none" placeholder="">
             </div>
 
 
 <div class="form-control">
-               <label for="dogprofile-edit-Color" class="form-label">Color</label>
-               <input id="dogprofile-edit-Color" type="text" class="form-input" data-role="none" placeholder="">
+               <label for="animal-add-color" class="form-label">Color</label>
+               <input id="animal-add-color" type="text" class="form-input" data-role="none" placeholder="">
             </div>
 
      
 
      <div class="form-control">
-               <label for="dogprofile-edit-Personality" class="form-label">Personality</label>
-               <input id="dogprofile-edit-Personality" type="text" class="form-input" data-role="none" placeholder="">
+               <label for="animal-add-personality" class="form-label">Personality</label>
+               <input id="animal-add-personality" type="text" class="form-input" data-role="none" placeholder="">
             </div>
 
 
-     <div class="form-control">
-               <label for="dogprofile-edit-Description" class="form-label">Description</label>
-               <input id="dogprofile-edit-Description" type="text" class="form-input" data-role="none" placeholder="">
-            </div>
+    <div class="form-control">
+          <label for="animal-add-description" class="form-label">Description</label>
+          <textarea id="animal-add-description" class="form-input" data-role="none"></textarea>
+        </div>
 
 
 
-
-
-
-
-             <div class="form-control">
-                <a href="#list-page" class="form-button">Save</a>
+            <div class="form-control">
+          <a href="#" class="js-animal-add"><input type="submit" value="Save" data-role="none" class="form-button"></a>
+        </div>
             
             </div>
       </form>
       </div>
+     </div>
+
 
        <footer data-role="footer">
          <ul>
@@ -868,7 +877,6 @@
             <li><a href="#user-profile-page"><img src="img/usericon.png" class="icon"></a></li>
          </ul>
       </footer>
-
 
 
 </section>
@@ -888,17 +896,18 @@
 
 
 
-<!-- dogprofile-edit-page-->
+<!-- animal-edit-page-->
 
 
 
-<section data-role="page" id="dogprofile-edit-page">
+<section data-role="page" id="animal-edit-page">
 
 
 
 
 
 <div data-role="main">
+   <div class="overscroll">
 
      <header data-role="header" style=" background-color:var(--color-white); box-shadow:none; ">
             <h1> Dog Profile Edit</h1>
@@ -914,7 +923,7 @@
 
        
 
-   <form id="dogprofile-edit-form" data-ajax="false" style="padding: 1em">
+   <form id="animal-edit-form" data-ajax="false" style="padding: 1em">
 
         
 
@@ -962,13 +971,12 @@
 
 
       </div>
+    </div>
 
 
 <div class="form-control">
-                <a href="#animal-profile-page" class="form-button">Save</a>
-            
-            </div>
-       
+          <a href="#" class="js-animal-edit"><input type="submit" value="Save" data-role="none" class="form-button"></a>
+        </div>
 
 
 
@@ -1010,7 +1018,7 @@
         </header>
       <div data-role="main">
          <ul class="settings-list">
-         <li><a href="#user-profile-edit-page">Edit Profile</a></li>
+         <li><a href="#user-edit-page">Edit Profile</a></li>
          <li><a href="#user-password-edit-page">Manage Password</a></li>
          <li><a href="#mydog-history-page">My dog History</a></li>
 
@@ -1049,7 +1057,7 @@
 
   
 
-<section data-role="page" id="user-profile-edit-page">
+<section data-role="page" id="user-edit-page">
 
  <header data-role="header" style=" background-color:var(--color-white); box-shadow:none; ">
             <h1>Edit Profile</h1>
@@ -1061,8 +1069,8 @@
         </header>
    <div data-role="main">
 
-        
-   <form id="user-profile-edit-form" data-ajax="false" style="padding: 1em">
+       
+   <form id="user-edit-form" data-ajax="false" style="padding: 1em">
 
  
 
@@ -1100,10 +1108,9 @@
 
 
 
-<div class="form-control">
-                <a href="#user-profile-page" class="form-button">Save</a>
-            
-            </div>
+<div class="form-control" style="padding: 0.5 1em">
+          <button type="submit" class="form-button js-user-edit" data-role="none">Save</button>
+        </div>
 </div>
 
 <footer data-role="footer">
@@ -1231,6 +1238,77 @@
          </ul>
       </footer>
 </section>
+
+
+
+
+<!-- LOCATION ADD PAGE -->
+
+
+  <section data-role="page" id="location-add-page">
+    <header data-role="header">
+      <h1>Choose Location</h1>
+        <ul>
+          <li class="btn-back"><a href="#" data-rel="back">Back</a></li>
+          <li class="flex-stretch"></li>
+          <li><a href="#location-description-page">Next</a></li>
+        </ul>
+    </header>
+    <div data-role="main">
+      <input type="hidden" id="location-add-lat" name="">
+      <input type="hidden" id="location-add-lng" name="">
+      <div class="map"></div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+<!-- LOCATION DESCRIPTION PAGE -->
+
+  <section data-role="page" id="location-description-page">
+    <header data-role="header">
+      <h1>Describe the your dog</h1>
+        <ul>
+          <li class="btn-back"><a href="#" data-rel="back">Back</a></li>
+          <li class="flex-stretch"></li>
+          <!-- <li><a href="#" class="js-location-add">Save</a></li> -->
+        </ul>
+    </header>
+    <div data-role="main">
+      <div class="overscroll">
+        <form id="location-add-form" data-ajax="false" style="padding: 0.5 1em">
+          
+          <div class="form-control animal-profile-image">
+            <img src="https://via.placeholder.com/400/?text=Upload" alt="">  
+          </div>
+
+          <div class="form-control">
+            <label for="location-add-description" class="form-label">Description</label>
+            <textarea id="location-add-description" class="form-input" data-role="none"></textarea>
+          </div>
+
+          <div class="form-control">
+            <a href="#" class="js-location-add"><input type="submit" value="Save" data-role="none" class="form-button"></a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
