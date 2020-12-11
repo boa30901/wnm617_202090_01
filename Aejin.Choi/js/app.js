@@ -27,7 +27,7 @@ $(()=>{
          case "animal-edit-page": AnimalEditPage(); break;
          case "Trackmap-page": TrackmapPage(); break;
          case "location-add-page": LocationAddPage(); break;
-     
+         
 
 
       }
@@ -115,7 +115,9 @@ $(()=>{
       $.mobile.navigate('#animal-profile-page');
    })
 
-
+  .on("click",'.js-animal-delete',function(e){
+   checkAnimalDelete($(this).data("id"));
+   })
 
 
 

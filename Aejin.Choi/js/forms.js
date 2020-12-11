@@ -1,13 +1,13 @@
 
 
 
-/*
+
 
 const checkSignupForm = () => {
 	let username = $("#signup-username").val();
 	let email = $("#signup-email").val();
 	let password = $("#signup-password").val();
-	let passwordconfirm = $("#signup-password-confirm").val();
+	let passwordconfirm = $("#signup-confirm-password").val();
 
 	if(password!=passwordconfirm) {
 		// here I need to add warning popup to let users know the error
@@ -26,7 +26,7 @@ const checkSignupForm = () => {
 	}
 }
 
-*/
+
 
 
 
@@ -52,21 +52,6 @@ const checkUserEditForm = () => {
 		window.history.go(-2);
 	})
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -107,13 +92,13 @@ const checkAnimalAddForm = () => {
 const checkAnimalEditForm = () => {
 	let name = $("#animal-edit-name").val();
 	let breed = $("#animal-edit-breed").val();
-	let personality = $("#animal-edit-personality").val();
 	let color = $("#animal-edit-color").val();
+	let personality = $("#animal-edit-personality").val();
 	let description = $("#animal-edit-description").val();
 
 	query({
 		type:'update_animal',
-		params:[name,breed,personality,color,description,sessionStorage.animalId]
+		params:[name,breed,color,personality,description,sessionStorage.animalId]
 	}).then(d=>{
 		if(d.error) {
 			throw d.error;
@@ -121,6 +106,26 @@ const checkAnimalEditForm = () => {
 		window.history.back();
 	})	
 }
+
+
+
+const checkAnimalDelete = id => {
+	query({
+		type:'delete_animal',
+		params:[id]
+	}).then(d=>{
+		if(d.error) {
+			throw d.error;
+		}
+		$.mobile.navigate("#list-page");
+	})
+}
+
+
+
+
+
+
 
 
 

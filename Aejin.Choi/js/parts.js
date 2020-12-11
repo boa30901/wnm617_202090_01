@@ -8,9 +8,9 @@ const makeAnimalList = templater(o=>`
       </div>
       <div class="animallist-description">
          <div class="animallist-name">${o.name}</div>
+       <div class="animallist-breed"><strong>Breed:</strong> ${o.breed}</div>
          <div class="animallist-color"><strong>Color:</strong>${o.color}</div>
-         <div class="animallist-breed"><strong>Breed:</strong> ${o.breed}</div>
-         <div class="animallist-Personality"><strong>Personality:</strong> ${o.Personality}</div>
+         <div class="animallist-Personality"><strong>Personality:</strong> ${o.personality}</div>
       </div>
    </div>
    `);
@@ -42,9 +42,16 @@ const makeAnimalProfile = templater(o=>`
    <div class="animallist-name">${o.name}</div>
   <div><strong>Breed</strong> ${o.breed}</div>
    <div><strong>Color</strong> ${o.color}</div>
-   <div><strong>Personality</strong> ${o.Personality}</div>
+   <div><strong>Personality</strong> ${o.personality}</div>
     <div><p>${o.description}</p></div>
-   `);
+  <div><a href="#" class="js-animal-delete" data-id="${o.id}">Delete</a></div></div>
+</div>
+
+
+`);
+
+
+ 
 
 
 
@@ -119,15 +126,6 @@ ${FormControl({
    value:o.breed
 })}
 
-${FormControl({
-   namespace:'animal-edit',
-   name:'Personality',
-   displayname:'Personality',
-   type:'text',
-   placeholder:'Type the Personality',
-   value:o.Personality
-})}
-
 
 ${FormControl({
    namespace:'animal-edit',
@@ -137,17 +135,31 @@ ${FormControl({
    placeholder:'Type the color',
    value:o.color
 })}
+
+${FormControl({
+   namespace:'animal-edit',
+   name:'Personality',
+   displayname:'personality',
+   type:'text',
+   placeholder:'Type the Personality',
+   value:o.Personality
+})}
+
+
 <div class="form-control">
    <label for="animal-edit-description" class="form-label">Description</label>
    <textarea id="animal-edit-description" class="form-input" data-role="none" placeholder="Type a description" style="height:6em">${o.description}</textarea>
 </div>
 `;
 
+ 
 
 
-
-
-
+const drawAnimalList = (a, empty_phrase=`<div class="animallist-name">No animals yet.Add some</div>`) => {
+   $("#list-page .animallist").html(
+      a.length ? makeAnimalList(a) : empty_phrase
+   )
+}
 
 
 

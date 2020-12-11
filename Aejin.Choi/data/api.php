@@ -145,9 +145,9 @@ case "recent_locations":
         // Create new user
          $r = makeQuery($c,"INSERT INTO
             `track_users`
-            (`username`,`email`,`password`,`img`,`date_create`)
+            (`name`,`username`,`phone`,`email`,`password`,`img`,`date_create`)
             VALUES
-            (?, ?, md5(?), 'https://via.placeholder.com/400?text=USER', NOW())
+            ('', ?,'',?,md5(?), 'https://via.placeholder.com/400?text=USER', NOW())
             ",$p);
          return ["id"=>$c->lastInsertId()];
 
@@ -156,10 +156,10 @@ case "recent_locations":
            
     case "insert_animal":
          $r = makeQuery($c,"INSERT INTO
-            `track_dogs`
-            (`user_id`,`name`,`breed`,`color`,`personality``description`,`img`,`date_create`)
+            `track_animals`
+            (`user_id`,`name`,`breed`,`color`,`personality`,`description`,`img`,`date_create`)
             VALUES
-            (?, ?, ?, ?, ?, 'https://placedog.net/400?', NOW())
+            (?, ?, ?, ?, ?, ?, 'https://placedog.net/400?', NOW())
             ",$p);
          return ["id"=>$c->lastInsertId()];
 
@@ -170,7 +170,7 @@ case "recent_locations":
             `track_locations`
             (`animal_id`,`lat`,`lng`,`description`,`photo`,`icon`,`date_create`)
             VALUES
-            (?, ?, ?, ?, 'https://via.placeholder.com/400?text=Photo', 'https://via.placeholder.com/100?text=Icon', NOW())
+            (?, ?, ?, ?,?,? 'https://via.placeholder.com/400?text=Photo', 'https://via.placeholder.com/100?text=Icon', NOW())
             ",$p);
          return [
             "r"=>$r,
@@ -187,7 +187,7 @@ case "recent_locations":
   
 
 
-case "update_user":
+            case "update_user":
 			$r = makeQuery($c,"UPDATE
 				`track_users`
 				SET
@@ -217,25 +217,12 @@ case "update_user":
 
 
 
-      // UPDATE
+      // DELETE
 
-         case "delete_animal":
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        case "delete_animal":
+			return makeQuery($c,"DELETE FROM `track_animals` WHERE `id`=?",$p,false);
+		case "delete_location":
+			return makeQuery($c,"DELETE FROM `track_locations` WHERE `id`=?",$p,false);
 
 
 

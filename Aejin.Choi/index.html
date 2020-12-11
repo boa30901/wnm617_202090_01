@@ -146,8 +146,6 @@
 
 
 
-
-
 <section data-role="page" id="signup-page">
       <div data-role="main">
          <div class="flex-stretch display-flex flex-align-center flex-justify-center">
@@ -157,8 +155,8 @@
         <form id="signup-form" data-ajax=“false” style="padding:1em;">
 
            <div class="form-control">
-               <label for="signup-Username" class="form-label">Username</label>
-               <input id="signup-Username" type="text" class="form-input" data-role="none" placeholder="Type your Username">
+               <label for="signup-username" class="form-label">Username</label>
+               <input id="signup-username" type="text" class="form-input" data-role="none" placeholder="Type your Username">
             </div>
 
           <div class="form-control">
@@ -175,8 +173,8 @@
 
          
      <div class="form-control">
-               <label for="signup-Confirm Password" class="form-label">Confirm Password</label>
-               <input id="signup-Confirm Password" type="password" class="form-input" data-role="none" placeholder="Type your Confirm Password">
+               <label for="signup-confirm-password" class="form-label">Confirm Password</label>
+               <input id="signup-confirm-password" type="password" class="form-input" data-role="none" placeholder="Type your Confirm Password">
             </div>
 
 
@@ -184,8 +182,7 @@
 
 
             
-            <div class="form-control">
-               <a href="#list-page" class="form-button">Sign Up</a>
+               <button type="submit" class="form-button" data-role="none">Sign up</button>
             </div>
             <div class="form-control" style="text-align:center;font-size:0.8em">
                Already have an account? <a href="#signin-page">Sign In</a>
@@ -239,7 +236,7 @@
 
 
               <div class="form-control">
-               <a href="#Trackmap-page" class="form-button" style="background-color:#ffb902ff; ">Share location</a>
+               <a href="#location-add-page" class="form-button" style="background-color:#ffb902ff; ">Share location</a>
             </div>
 
 
@@ -372,7 +369,7 @@
          
       </header>
       <div data-role="main">
-        
+         <div class="overscroll">
          
         <div class="animallist-item"  style="width: 9.5em;">
           <a href="#animal-add-page">
@@ -387,12 +384,12 @@
 
  
 
-         <div class="overscroll">
+        
 
         <div class="animallist"></div>
-         </div>
+         
       </div>
-
+</div>
 
 
 
@@ -474,7 +471,7 @@
 
  <!-- list add animal page -->
 
-<div class="modal" id="list-add-animal">
+<!--<div class="modal" id="list-add-animal">
          <div class="modal-back" data-deactivate="#list-add-animal"></div>
          <form class="modal-popup" id="list-add-animal-form" data-ajax="false">
             <div class="modal-head"><h1>Add Animal</h1></div>
@@ -502,7 +499,7 @@
 
 
     </section>
-
+-->
 
 
 
@@ -973,11 +970,11 @@
       </div>
     </div>
 
+  
 
 <div class="form-control">
           <a href="#" class="js-animal-edit"><input type="submit" value="Save" data-role="none" class="form-button"></a>
         </div>
-
 
 
 </section>
@@ -1123,7 +1120,6 @@
 
 
 </section>
-
 
 
 
