@@ -129,6 +129,10 @@ const AnimalEditPage = async() => {
 
 
 
+
+
+
+
 const LocationAddPage = async() => {
    let map_el = await makeMap("#location-add-page .map");
    makeMarkers(map_el,[]);
