@@ -147,6 +147,35 @@ a {
 
 
 
+/* HOTDOG */
+
+.hotdog {
+    width: 100%;
+    display: inline-flex;
+    border-width: 0;
+    background-color: var(--color-white);
+    padding: 0.5em 1em;
+    border-radius: 0.2em;
+    font: inherit;
+    outline: 0;
+    line-height: 1;
+}
+[data-role="header"]>.hotdog {
+  padding: 0.7em 1em;
+}
+
+.hotdog>input {
+  flex: 1;
+  border-width: 0;
+  border-radius: 0;
+  background-color: transparent;
+  font: inherit;
+  color: inherit;
+  outline: 0;
+  padding: 0;
+}
+
+
 
 
 
