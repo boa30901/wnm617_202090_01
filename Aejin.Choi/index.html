@@ -18,6 +18,8 @@
    <link rel="stylesheet" href="css/app.css">
    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet"> 
    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
    <script src="lib/js/jquery-2.2.4.min.js"></script>
    <script src="js/functions.js"></script>
@@ -213,7 +215,6 @@
 
 
 
-
 <!-- recent Page -->
 
 
@@ -223,7 +224,7 @@
          <div class="map"></div>
 
          <div class="floater right bottom">
-             <div class="btn-circle" data-toggle="#recent-drawer">&plus;</div><br>
+             <div class="btn-circle" data-toggle="#recent-drawer"  style="color: var(--color-main-medium)">&plus;</div><br>
          </div>
 
       
@@ -234,7 +235,7 @@
               
                <div class="modal-head2">Find Your Dog </div>
                <div class="modal-body">
-                 Where's benjamin?<br>
+                 Where's your dog?<br>
                  300 Ft From Home
 
 
@@ -377,8 +378,19 @@
          <form class="hotdog form-control" id="list-search-form" data-ajax="false" >
         <input type="search" id="list-search-input" data-role="none" placeholder="&#128269;Search">
       </form>
+     </header>
 
-               </header>
+      
+         <!--<header data-role="header">
+         <div class="filter-list">
+            <div class="filter" data-field="type" data-value="">All</div>
+             <div class="filter" data-field="type" data-value="cat">Cat</div>
+            <div class="filter" data-field="type" data-value="dog">Dog</div>
+            <div class="filter" data-field="type" data-value="horse">Horse</div> 
+         </div>
+      </header>-->
+
+
       <div data-role="main">
          <div class="overscroll">
          
@@ -515,6 +527,10 @@
 
 
 
+     
+
+
+
 
 
 
@@ -522,12 +538,9 @@
 
 
 <section data-role="page" id="user-profile-page">
-      <div data-role="main">
-
-     <form id="user-profile-form" data-ajax="false" style="padding: 1em">
-
-        <header data-role="header" style=" background-color:var(--color-white); box-shadow:none; ">
-            <h1>My Profile</h1>
+      
+        <header data-role="header" style=" background-color:var(--color-main-medium); box-shadow:none; padding: 10px; ">
+            <h1 style="color: var(--color-white);">My Profile</h1>
             <ul>
 
                 <li><a href="#list-page"><img src="img/backicon.png" class="icon" style=" height: 1.6em; width:auto;"></a>
@@ -543,7 +556,10 @@
         
         </header>
 
-      
+      <div data-role="main">
+
+     <form id="user-profile-form" data-ajax="false" style="padding: 1em">
+
 
       </form>
         
@@ -648,6 +664,49 @@
 
 
 
+<!-- User upload page -->
+
+
+
+  
+
+
+
+<section data-role="page" id="user-upload-page">
+    <header data-role="header" style=" background-color:var(--color-main-medium); box-shadow:none; padding: 10px;">
+    <h1 style="color: var(--color-white);">Upload Photo</h1>
+      <ul>
+       
+        <li><a href="#list-page"><img src="img/backicon.png" class="icon" style=" height: 1.6em; width:auto; margin-left: -1em;"></a></li>
+        <li class="flex-stretch"></li>
+        <li><a href="#" class="js-user-upload" style="color:#ffb902ff; margin-top: -.5em;">Save</a></li>
+      </ul>
+    </header>
+
+    <div data-role="main">
+      <form id="user-upload-form" data-ajax="false">
+        <input type="hidden" id="user-upload-image">
+        <label class="image-uploader full" style="position:absolute; top:0; left:0; width:100%; height:100%; background-position:center; background-size:contain; background-repeat:no-repeat;">
+          <input type="file" data-role="none" id="user-upload-input" style="display: none;">
+        </label>
+      </form>
+      <div class="form-control" style="padding: 0.7em 1em">
+        <label for="user-upload-input" class="form-button">Choose Image</label>
+      </div>
+    </div>
+
+     <footer data-role="footer">
+         <ul>
+             <li><a href="#recent-page"><img src="img/Mapicon.png" class="icon"></a></li>
+            <li><a href="#list-page"><img src="img/Dogicon.png" class="icon"></a></li>
+            <li><a href="#user-profile-page"><img src="img/usericon.png" class="icon"></a></li>
+         </ul>
+      </footer>
+  </section>
+
+
+
+
 
 
 
@@ -659,10 +718,10 @@
 
 
 <section data-role="page" id="animal-profile-page">
-      <header data-role="header" style=" background-color:var(--color-white); box-shadow:none; padding: 10px;">
-          <h1>Dog Profile</h1>
+      <header data-role="header" style=" background-color:var(--color-main-medium);box-shadow:none; padding: 10px;">
+          <h1 style="color: var(--color-white);">Dog Profile</h1>
          <ul>
-            <li><a href="#list-page"><img src="img/backicon.png" class="icon" style=" height: 1.6em; width:auto;"></a></li>
+            <li><a href="#list-page"><img src="img/backicon.png" class="icon" style=" height: 1.6em; width:auto; margin-left: -1em;" ></a></li>
 
 
 
@@ -672,6 +731,7 @@
 
 
       <div data-role="main">
+        <div class="overscroll">
          <div class="profile-top">
             <div class="map"></div>
 
@@ -679,15 +739,20 @@
             <a href="#location-add-page" class="btn-circle" style="color: var(--color-main-medium)">&plus;</a>
           </div>
         </div>
-
+          
          <div class="profile-bottom">
+
+         <div class="floater right top">
+          <a href="#animal-edit-page" class="" style="color: var(--color-main-medium); margin-right: 1em;"><span class="material-icons icon-edit">edit</span></a></div>
             <div class="profile"></div>
-          <div class="form-control">
-                <a href="#animal-edit-page" class="form-button">Edit </a>
+
+         <!--  <div class="form-control">
+                <a href="#animal-edit-page" class="form-button">Edit </a> 
             
-            </div>
+            </div>-->
 
          </div>
+       </div>
       </div>
 
 
@@ -806,6 +871,8 @@
 
 
 
+
+
 <!-- animal-add-page -->
 
 
@@ -813,19 +880,20 @@
 <section data-role="page" id="animal-add-page">
 
 
-<header data-role="header" style=" background-color:var(--color-white); box-shadow:none; ">
-            <h1> Add a new Dog  </h1>
+ <header data-role="header" style=" background-color:var(--color-main-medium);box-shadow:none; padding: 10px;">
+             <h1 style="color: var(--color-white);"> Add a new Dog  </h1>
             <ul>
 
-                <li><a href="#list-page"><img src="img/backicon.png" class="icon" style=" height: 1.6em; width:auto;"></a></li>
+                <li><a href="#list-page"><img src="img/backicon.png" class="icon" style=" height: 1.6em; width:auto; margin-left: -1em;"></a></li>
 
            </ul>
-
-
 
         </header>
 
 
+
+
+  
 
 <div data-role="main">
 
@@ -834,7 +902,8 @@
 
         <input type="hidden" id="animal-add-destination"  value="#animal-profile-page">
 
-
+      
+    
 
 <div class="form-control">
                <label for="animal-add-name" class="form-label">Name</label>
@@ -895,9 +964,7 @@
 
 
 
-
-
-
+ 
 
 
 
@@ -911,17 +978,11 @@
 <section data-role="page" id="animal-edit-page">
 
 
-
-
-
-<div data-role="main">
-   <div class="overscroll">
-
-     <header data-role="header" style=" background-color:var(--color-white); box-shadow:none; ">
-            <h1> Dog Profile Edit</h1>
+      <header data-role="header" style=" background-color:var(--color-main-medium);box-shadow:none; padding: 10px;">
+           <h1 style="color: var(--color-white);"> Dog Profile Edit</h1>
             <ul>
 
-                <li><a href="#animal-profile-page"><img src="img/backicon.png" class="icon" style=" height: 1.6em; width:auto;"></a></li>
+                <li><a href="#animal-profile-page"><img src="img/backicon.png" class="icon" style=" height: 1.6em; width:auto; margin-left: -1em;"></a></li>
 
            </ul>
 
@@ -929,7 +990,8 @@
 
         </header>
 
-       
+       <div data-role="main">
+   <div class="overscroll">
 
    <form id="animal-edit-form" data-ajax="false" style="padding: 1em">
 
@@ -983,7 +1045,7 @@
 
   
 
-<div class="form-control">
+<div class="form-control" style="padding: 1em;">
           <a href="#" class="js-animal-edit"><input type="submit" value="Save" data-role="none" class="form-button"></a>
         </div>
 
@@ -1003,28 +1065,29 @@
 
 
 
-
-
-
  <!-- User settings page -->
 
 
 <section data-role="page" id="user-settings-page">
 
-<div data-role="main">
 
-        
-   <form id="user-settings--form" data-ajax="false" style="padding: 1em">
-
-     <header data-role="header" style=" background-color:var(--color-white); box-shadow:none; ">
-            <h1>User Settings</h1>
+          <header data-role="header" style=" background-color:var(--color-main-medium);box-shadow:none; padding: 10px;">
+     
+            <h1 style="color: var(--color-white);">User Settings</h1>
             <ul>
 
                 <li><a href="#user-profile-page"><img src="img/backicon.png" class="icon" style=" height: 1.6em; width:auto;"></a></li>
            
          </ul>
         </header>
-      <div data-role="main">
+
+
+<div data-role="main">
+        
+   <form id="user-settings--form" data-ajax="false" style="padding: 1em">
+
+
+      
          <ul class="settings-list">
          <li><a href="#user-edit-page">Edit Profile</a></li>
          <li><a href="#user-password-edit-page">Manage Password</a></li>
@@ -1061,14 +1124,16 @@
 
 
 
+
+
  <!-- User profile edit page -->
 
   
 
 <section data-role="page" id="user-edit-page">
 
- <header data-role="header" style=" background-color:var(--color-white); box-shadow:none; ">
-            <h1>Edit Profile</h1>
+ <header data-role="header" style=" background-color:var(--color-main-medium);box-shadow:none; padding: 10px;">
+            <h1 style="color: var(--color-white);">Edit Profile</h1>
             <ul>
 
                 <li><a href="#user-settings-page"><img src="img/backicon.png" class="icon" style=" height: 1.6em; width:auto;"></a></li>
@@ -1149,13 +1214,10 @@
 <section data-role="page" id="user-password-edit-page">
 
 
-<div data-role="main">
 
-        
-   <form id="user-password-edit-page" data-ajax="false" style="padding: 1em">
 
-  <header data-role="header" style=" background-color:var(--color-white); box-shadow:none; ">
-            <h1>Manage Password </h1>
+   <header data-role="header" style=" background-color:var(--color-main-medium);box-shadow:none; padding: 10px;">
+             <h1 style="color: var(--color-white);">Manage Password </h1>
             <ul>
 
                 <li><a href="#user-settings-page"><img src="img/backicon.png" class="icon" style=" height: 1.6em; width:auto;"></a></li>
@@ -1163,7 +1225,10 @@
          </ul>
         </header>
 
+<div data-role="main">
 
+        
+   <form id="user-password-edit-page" data-ajax="false" style="padding: 1em">
 <div class="form-control">
                <label for="user-password-edite-current password" class="form-label">Current password</label>
                <input id="user-password-edit-current password" type="text" class="form-input" data-role="none" placeholder="Current password">
@@ -1211,14 +1276,10 @@
 <section data-role="page" id="mydog-history-page">
 
 
-<div data-role="main">
 
 
-
-<form id="mydog-history-page" data-ajax="false" style="padding: 1em">
-
-  <header data-role="header" style=" background-color:var(--color-white); box-shadow:none; ">
-            <h1>My dog history </h1>
+  <header data-role="header" style=" background-color:var(--color-main-medium);box-shadow:none; padding: 10px;">
+            <h1 style="color: var(--color-white);">My dog history </h1>
             <ul>
 
                 <li><a href="#user-settings-page"><img src="img/backicon.png" class="icon" style=" height: 1.6em; width:auto;"></a></li>
@@ -1227,6 +1288,11 @@
         </header>
 
 
+<div data-role="main">
+
+
+
+<form id="mydog-history-page" data-ajax="false" style="padding: 1em">
 
 
 
@@ -1247,6 +1313,10 @@
 </section>
 
 
+  
+
+  
+
 
 
 <!-- LOCATION ADD PAGE -->
@@ -1254,11 +1324,11 @@
 
   <section data-role="page" id="location-add-page">
     <header data-role="header">
-      <h1>Choose Location</h1>
+      <h1 style="color: var(--color-white);">Choose Location</h1>
         <ul>
-          <li class="btn-back"><a href="#" data-rel="back">Back</a></li>
+          <li class="btn-back"><a href="#" data-rel="back" style="padding: 8.5px;"><img src="img/backicon.png" class="icon" style=" height: 1.6em; width:auto;"></a></li>
           <li class="flex-stretch"></li>
-          <li><a href="#location-description-page">Next</a></li>
+          <li><a href="#location-description-page" style="color:#ffb902ff;">Next</a></li>
         </ul>
     </header>
     <div data-role="main">
@@ -1278,9 +1348,9 @@
 
   <section data-role="page" id="location-description-page">
     <header data-role="header">
-      <h1>Describe the your dog</h1>
+      <h1 style="color: var(--color-white);">Describe the your dog</h1>
         <ul>
-          <li class="btn-back"><a href="#" data-rel="back">Back</a></li>
+          <li class="btn-back"><a href="#" data-rel="back" style="padding: 8.5px;"><img src="img/backicon.png" class="icon" style=" height: 1.6em; width:auto;"></a></li>
           <li class="flex-stretch"></li>
           <!-- <li><a href="#" class="js-location-add">Save</a></li> -->
         </ul>
@@ -1290,7 +1360,7 @@
         <form id="location-add-form" data-ajax="false" style="padding: 0.5 1em">
           
           <div class="form-control animal-profile-image">
-            <img src="https://via.placeholder.com/400/?text=Upload" alt="">  
+            <img src="https://via.placeholder.com/400/?text=Upload" alt="" style="margin: 4em 6em 2em 6em;">  
           </div>
 
           <div class="form-control">
@@ -1298,7 +1368,7 @@
             <textarea id="location-add-description" class="form-input" data-role="none"></textarea>
           </div>
 
-          <div class="form-control">
+          <div class="form-control" style="padding: 1.5em; margin-top:-1.5em;">
             <a href="#" class="js-location-add"><input type="submit" value="Save" data-role="none" class="form-button"></a>
           </div>
         </form>

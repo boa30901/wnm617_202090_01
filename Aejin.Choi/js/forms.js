@@ -35,8 +35,6 @@ const checkSignupForm = () => {
 
 
 
-
-
 const checkUserEditForm = () => {
 	let username = $("#user-edit-username").val();
 	let name = $("#user-edit-name").val();
@@ -128,9 +126,6 @@ const checkAnimalDelete = id => {
 
 
 
-
-
-
 const checkLocationAddForm = () => {
 	let lat = $("#location-add-lat").val();
 	let lng = $("#location-add-lng").val();
@@ -160,9 +155,54 @@ const checkLocationAddForm = () => {
 
 
 
+const checkSearchForm = async() => {
+   let s = $("#list-search-input").val()
+   console.log(s);
+
+   let r = await query({
+      type:"search_animals",
+      params:[s,sessionStorage.userId]
+   })
+
+   drawAnimalList(r.result,"Search produced no results.");
+
+   console.log(r)
+}
 
 
 
+
+
+
+
+
+const checkUpload = file => {
+   let fd = new FormData();
+   fd.append("image",file);
+
+   return fetch('data/api.php',{
+      method:'POST',
+      body:fd
+   }).then(d=>d.json());
+}
+
+
+
+
+const checkUserUploadForm = () => {
+   let upload = $("#user-upload-image").val()
+   if(upload=="") return;
+
+   query({
+      type:'update_user_image',
+      params:[upload,sessionStorage.userId]
+   }).then(d=>{
+      if(d.error) {
+         throw d.error;
+      }
+      window.history.back();
+   })
+}
 
 
 

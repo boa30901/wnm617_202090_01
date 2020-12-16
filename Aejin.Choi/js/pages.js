@@ -154,7 +154,18 @@ const LocationAddPage = async() => {
 
 
 
-
+const UserUploadPage = async() => {
+   query({
+      type:'user_by_id',
+      params:[sessionStorage.userId]
+   }).then(d=>{
+      makeUploaderImage({
+         namespace:'user-upload',
+         folder:'',
+         name:d.result[0].img
+      })
+   })
+}
 
 
 

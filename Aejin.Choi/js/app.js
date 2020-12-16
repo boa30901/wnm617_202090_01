@@ -27,7 +27,7 @@ $(()=>{
          case "animal-edit-page": AnimalEditPage(); break;
          case "Trackmap-page": TrackmapPage(); break;
          case "location-add-page": LocationAddPage(); break;
-         
+         case "user-upload-page": UserUploadPage(); break;
 
 
       }
@@ -53,6 +53,13 @@ $(()=>{
       checkSignupForm();
    })
 
+  .on("submit","#list-search-form",function(e){
+      e.preventDefault();
+      checkSearchForm();
+   })
+
+
+
 
 
 
@@ -72,25 +79,26 @@ $(()=>{
    .on("click",'.js-location-add',function(e){
       checkLocationAddForm();
    })
-
+   .on("click",'.js-user-upload',function(e){
+      checkUserUploadForm();
+   })
 
 
 
 .on("click",".filter",function(){
       checkListFilter($(this).data());
    })
+   
+
+
+
    .on("change",".image-uploader input",function(){
       checkUpload(this.files[0])
       .then(d=>{
          console.log(d)
-         makeUploaderImage({
-            namespace:'user-upload',
-            folder:'uploads/',
-            name:d.result
-         })
+         makeUploaderImage(this,d.result,'uploads/')
       })
    })
-
 
 
 

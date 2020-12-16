@@ -20,9 +20,14 @@ const makeAnimalList = templater(o=>`
 
 
 const makeUserProfile = templater(o=>`
-   <div class="user-profile-image">
+   <div class="user-profile-image"  style="position: relative;">
       <img src="${o.img}" alt="">
-   </div>
+   
+   
+     <a href="#user-upload-page" class="floater bottom right"  style="color: var(--color-main-medium); margin-right: 3em;"><span class="material-icons icon-edit">edit</span></a>
+      </div>
+
+   
     <h3>${o.username}</h3>
    <h2>${o.name}</h2>
   <h3>${o.email}</h3>
@@ -44,7 +49,7 @@ const makeAnimalProfile = templater(o=>`
    <div><strong>Color</strong> ${o.color}</div>
    <div><strong>Personality</strong> ${o.personality}</div>
     <div><p>${o.description}</p></div>
-  <div><a href="#" class="js-animal-delete" data-id="${o.id}">Delete</a></div></div>
+  <div class="form-button" style="width: 90%; margin-bottom: 2em;"><a href="#" class="js-animal-delete" data-id="${o.id}">Delete</a></div></div>
 </div>
 
 
@@ -105,10 +110,10 @@ ${FormControl({
 
 
 const makeAnimalEditForm = o => `
-<!-- <div class="animal-profile-image display-flex flex-justify-center" style="    margin-top: -3em;
-">
+ <div class="animal-profile-image display-flex flex-justify-center" style="    margin-top: -3em;">
    <img src="${o.img}">
-</div> -->
+
+</div> 
 ${FormControl({
    namespace:'animal-edit',
    name:'name',
@@ -139,10 +144,10 @@ ${FormControl({
 ${FormControl({
    namespace:'animal-edit',
    name:'Personality',
-   displayname:'personality',
+   displayname:'Personality',
    type:'text',
    placeholder:'Type the Personality',
-   value:o.Personality
+   value:o.personality
 })}
 
 
@@ -150,18 +155,32 @@ ${FormControl({
    <label for="animal-edit-description" class="form-label">Description</label>
    <textarea id="animal-edit-description" class="form-input" data-role="none" placeholder="Type a description" style="height:6em">${o.description}</textarea>
 </div>
+
+
 `;
 
  
 
 
-const drawAnimalList = (a, empty_phrase=`<div class="animallist-name">No animals yet.Add some</div>`) => {
+
+
+
+
+
+const drawAnimalList = (a,empty_phrase="No dogs yet, you should add some.") => {
    $("#list-page .animallist").html(
       a.length ? makeAnimalList(a) : empty_phrase
    )
 }
 
 
+
+
+const makeUploaderImage = (el, name, folder='') => {
+
+   $(el).parent().css({'background-image':`url(${folder+name}`}).addClass('picked')
+      .prev().val(folder+name);
+}
 
 
 
