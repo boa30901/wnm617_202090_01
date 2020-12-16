@@ -27,11 +27,10 @@ const makeUserProfile = templater(o=>`
      <a href="#user-upload-page" class="floater bottom right"  style="color: var(--color-main-medium); margin-right: 3em;"><span class="material-icons icon-edit">edit</span></a>
       </div>
 
-   
+    <h2>Wellcome ${o.name}</h2>
     <h3>${o.username}</h3>
-   <h2>${o.name}</h2>
-  <h3>${o.email}</h3>
-   
+   <h3>${o.email}</h3>
+   <h3>I'm a dog lover &#128054;</h3>
    `);
 
 
@@ -143,7 +142,7 @@ ${FormControl({
 
 ${FormControl({
    namespace:'animal-edit',
-   name:'Personality',
+   name:'personality',
    displayname:'Personality',
    type:'text',
    placeholder:'Type the Personality',
