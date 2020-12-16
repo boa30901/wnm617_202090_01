@@ -700,7 +700,7 @@ img.icon{
     padding: 1em;
     font-family: 'Montserrat', sans-serif;
 
-
+}
 
 
 /* profile user photo  */
@@ -708,7 +708,7 @@ img.icon{
 
 
 
-.Profile photo {
+.profile photo {
 
 
     text-align: center;
@@ -781,7 +781,33 @@ img.icon{
 }
 
 
-
+.image-uploader.thumbnail {
+   width:10em;
+   height:10em;
+   border-radius:0.5em;
+   background-position:center;
+   background-size:cover;
+   position:relative;
+   border:2px solid white;
+   box-shadow:0 1px 3px rgba(0,0,0,0.2);
+   border-radius: 2em;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 2em;
+}
+.image-uploader.thumbnail::before {
+   color:black;
+   content:'+';
+   position:absolute;
+   top:50%;
+   left:50%;
+   transform:translate(-50%,-50%);
+   vertical-align:middle;
+   font-size:3em;
+}
+.image-uploader.thumbnail.picked::before {
+   content:'';
+}
 
 
 

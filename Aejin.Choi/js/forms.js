@@ -63,7 +63,7 @@ const checkAnimalAddForm = () => {
    let color = $("#animal-add-color").val();
    let personality = $("#animal-add-personality").val();
    let description = $("#animal-add-description").val();
-
+   
    query({
       type:'insert_animal',
       params:[sessionStorage.userId,name,breed,color,personality,description]
@@ -93,10 +93,11 @@ const checkAnimalEditForm = () => {
 	let color = $("#animal-edit-color").val();
 	let personality = $("#animal-edit-personality").val();
 	let description = $("#animal-edit-description").val();
+	let image = $("#animal-edit-image").val();
 
 	query({
 		type:'update_animal',
-		params:[name,breed,color,personality,description,sessionStorage.animalId]
+		params:[name,breed,color,personality,description,image,sessionStorage.animalId]
 	}).then(d=>{
 		if(d.error) {
 			throw d.error;

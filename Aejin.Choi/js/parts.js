@@ -24,7 +24,7 @@ const makeUserProfile = templater(o=>`
       <img src="${o.img}" alt="">
    
    
-     <a href="#user-upload-page" class="floater bottom right"  style="color: var(--color-main-medium); margin-right: 3em;"><span class="material-icons icon-edit">edit</span></a>
+     <a href="#user-upload-page" class="floater bottom right"  style="color: var(--color-main-medium); margin-right: 3em; margin-bottom:3em;"><span class="material-icons icon-edit">edit</span></a>
       </div>
 
     <h2>Wellcome ${o.name}</h2>
@@ -109,10 +109,14 @@ ${FormControl({
 
 
 const makeAnimalEditForm = o => `
- <div class="animal-profile-image display-flex flex-justify-center" style="    margin-top: -3em;">
-   <img src="${o.img}">
+ 
+ <input type="hidden" id="animal-edit-image" value="${o.img}">
+<label class="image-uploader thumbnail picked" style="background-image:url('${o.img}')">
+   <input type="file" data-role="none" id="animal-edit-input">
+</label>
 
-</div> 
+
+
 ${FormControl({
    namespace:'animal-edit',
    name:'name',

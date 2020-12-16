@@ -893,8 +893,6 @@
 
 
 
-  
-
 <div data-role="main">
 
         <div class="overscroll">
@@ -902,8 +900,12 @@
 
         <input type="hidden" id="animal-add-destination"  value="#animal-profile-page">
 
-      
-    
+         
+
+           <input type="hidden" id="animal-add-image">
+               <label class="image-uploader thumbnail">
+                  <input type="file" data-role="none" id="animal-add-upload">
+               </label>
 
 <div class="form-control">
                <label for="animal-add-name" class="form-label">Name</label>
@@ -992,6 +994,9 @@
 
        <div data-role="main">
    <div class="overscroll">
+
+
+
 
    <form id="animal-edit-form" data-ajax="false" style="padding: 1em">
 
