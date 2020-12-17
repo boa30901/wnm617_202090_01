@@ -27,7 +27,7 @@ const makeUserProfile = templater(o=>`
      <a href="#user-upload-page" class="floater bottom right"  style="color: var(--color-main-medium); margin-right: 6em; margin-bottom:3em;"><span class="material-icons icon-edit">edit</span></a>
       </div>
 
-    <h2>Wellcome ${o.name}</h2>
+    <h2>Welcome ${o.name}</h2>
     <h3>${o.username}</h3>
    <h3>${o.email}</h3>
    <h3>I'm a dog lover &#128054;</h3>
