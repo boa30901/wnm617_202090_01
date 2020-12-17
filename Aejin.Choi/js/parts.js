@@ -31,6 +31,7 @@ const makeUserProfile = templater(o=>`
     <h3>${o.username}</h3>
    <h3>${o.email}</h3>
    <h3>I'm a dog lover &#128054;</h3>
+  
    `);
 
 

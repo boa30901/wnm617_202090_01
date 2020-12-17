@@ -219,15 +219,17 @@
 
 
 <section data-role="page" id="recent-page">
+     
+ 
       <div data-role="main">
-
+           <div class="overscroll">
          <div class="map"></div>
-
+          
          <div class="floater right bottom">
              <div class="btn-circle" data-toggle="#recent-drawer"  style="color: var(--color-main-medium)">&plus;</div><br>
          </div>
 
-      
+         
          <div class="modal" id="recent-drawer">
             <div class="modal-back" data-deactivate="#recent-drawer"></div>
 
@@ -248,13 +250,13 @@
                <a href="#location-add-page" class="form-button" style="background-color:#ffb902ff; ">Share location</a>
             </div>
 
-
-
+              
 
                </div>
              </div>
-          
-         </div>
+           </div>
+          </div>
+         
     </div>
       
 <footer data-role="footer">
@@ -264,7 +266,7 @@
             <li><a href="#user-profile-page"><img src="img/usericon.png" class="icon"></a></li>
          </ul>
       </footer>
-
+ 
    </section>
 
 
@@ -557,6 +559,7 @@
         </header>
 
       <div data-role="main">
+        <div class="overscroll">
 
      <form id="user-profile-form" data-ajax="false" style="padding: 1em">
 
@@ -565,7 +568,7 @@
         
          <div class="profile"></div>
       </div>
-      
+      </div>
   
 
   <footer data-role="footer">
@@ -1353,7 +1356,7 @@
 
   <section data-role="page" id="location-description-page">
     <header data-role="header">
-      <h1 style="color: var(--color-white);">Describe the your dog</h1>
+      <h1 style="color: var(--color-white);">Share location</h1>
         <ul>
           <li class="btn-back"><a href="#" data-rel="back" style="padding: 8.5px;"><img src="img/backicon.png" class="icon" style=" height: 1.6em; width:auto;"></a></li>
           <li class="flex-stretch"></li>
