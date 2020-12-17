@@ -21,10 +21,10 @@ const makeAnimalList = templater(o=>`
 
 const makeUserProfile = templater(o=>`
    <div class="user-profile-image"  style="position: relative;">
-      <img src="${o.img}" alt="">
+      <img src="${o.img}" alt="" style="padding:3em; margin:0;">
    
    
-     <a href="#user-upload-page" class="floater bottom right"  style="color: var(--color-main-medium); margin-right: 3em; margin-bottom:3em;"><span class="material-icons icon-edit">edit</span></a>
+     <a href="#user-upload-page" class="floater bottom right"  style="color: var(--color-main-medium); margin-right: 6em; margin-bottom:3em;"><span class="material-icons icon-edit">edit</span></a>
       </div>
 
     <h2>Wellcome ${o.name}</h2>
@@ -102,6 +102,7 @@ ${FormControl({
 
 
 
+
 })}
 `;
 
@@ -158,6 +159,8 @@ ${FormControl({
    <label for="animal-edit-description" class="form-label">Description</label>
    <textarea id="animal-edit-description" class="form-input" data-role="none" placeholder="Type a description" style="height:6em">${o.description}</textarea>
 </div>
+
+
 
 
 `;

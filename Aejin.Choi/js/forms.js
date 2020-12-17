@@ -64,6 +64,7 @@ const checkAnimalAddForm = () => {
    let personality = $("#animal-add-personality").val();
    let description = $("#animal-add-description").val();
    
+
    query({
       type:'insert_animal',
       params:[sessionStorage.userId,name,breed,color,personality,description]
